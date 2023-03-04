@@ -1,0 +1,20 @@
+/* reset css */
+*{ 
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+   }
+
+html {
+    font-family: 'Montserrat', sans-serif;
+   }
+
+:root {
+    --primaryRed: #E7242D;
+    --secondaryRed: #FC5F6A;
+    --darkBrown: #3C3229;
+    --grayBrown: #6A5C54;
+    --darkModeBg: #181616;
+    --darkModeRed: #C41D25;
+}

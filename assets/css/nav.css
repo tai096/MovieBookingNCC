@@ -1,0 +1,30 @@
+a {
+  text-decoration: none;
+  padding: 5px 0;
+  font-weight: 600;
+  color: white;
+  border-bottom: 2px solid transparent;
+  box-sizing: border-box;
+}
+
+a:hover {
+  color: var(--primaryRed);
+  border-bottom: 2px solid var(--secondaryRed);
+  transition: 300ms;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.7),
+    rgba(0, 0, 0, 0)
+  );
+  padding: 15px 45px;
+}
+
+.logo {
+  width: 70px;
+}
