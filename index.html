@@ -29,29 +29,22 @@
           class="logo"
           style="cursor: pointer"
         />
-        <a
-          href="./index.html"
-          style="
-            color: var(--primaryRed);
-            border-bottom: 2px solid var(--secondaryRed);
-          "
-          >TRANG CHỦ</a
-        >
-        <a href="./introduction.html">GIỚI THIỆU</a>
-        <a href="./showtimes.html">LỊCH CHIẾU</a>
-        <a href="./news.html">TIN TỨC VÀ ƯU ĐÃI</a>
-        <a href="./price.html">GIÁ VÉ</a>
-        <div
-          style="
-            border-left: 2px solid white;
-            width: 300px;
-            padding-left: 50px;
-            display: flex;
-            justify-content: space-between;
-          "
-        >
-          <a href="">ĐĂNG NHẬP</a>
-          <a href="">CHẾ ĐỘ TỐI</a>
+        <div class="nav__menu">
+          <a href="./index.html">TRANG CHỦ</a>
+          <a href="./introduction.html">GIỚI THIỆU</a>
+          <a href="./showtimes.html">LỊCH CHIẾU</a>
+          <a href="./news.html">TIN TỨC VÀ ƯU ĐÃI</a>
+          <a href="./price.html">GIÁ VÉ</a>
+          <div class="nav__right">
+            <a href="">ĐĂNG NHẬP</a>
+            <a href="">CHẾ ĐỘ TỐI</a>
+          </div>
+        </div>
+
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
         </div>
       </nav>
 
@@ -61,5 +54,8 @@
       <!-- footer -->
       <footer class="footer">footer</footer>
     </div>
+
+    <script src="./scripts/nav.js" />
+    ;
   </body>
 </html>
