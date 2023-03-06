@@ -9,6 +9,10 @@
     <link rel="stylesheet" href="./assets/css/home.css" />
     <link rel="stylesheet" href="./assets/css/footer.css" />
     <link rel="stylesheet" href="./assets/css/footer.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -35,9 +39,17 @@
           <a href="./showtimes.html">LỊCH CHIẾU</a>
           <a href="./news.html">TIN TỨC VÀ ƯU ĐÃI</a>
           <a href="./price.html">GIÁ VÉ</a>
+
           <div class="nav__right">
             <a href="">ĐĂNG NHẬP</a>
-            <a href="">CHẾ ĐỘ TỐI</a>
+            <div class="toggle">
+              <input type="checkbox" hidden class="checkbox" id="checkbox" />
+              <label for="checkbox" class="label">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+                <div class="ball"></div>
+              </label>
+            </div>
           </div>
         </div>
 
@@ -55,7 +67,6 @@
       <footer class="footer">footer</footer>
     </div>
 
-    <script src="./scripts/nav.js" />
-    ;
+    <script src="./js/nav.js"></script>
   </body>
 </html>
