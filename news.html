@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/base.css" />
+    <link rel="stylesheet" href="./assets/css/nav.css" />
+    <link rel="stylesheet" href="./assets/css/home.css" />
+    <link rel="stylesheet" href="./assets/css/footer.css" />
+    <link rel="stylesheet" href="./assets/css/footer.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Rạp chiếu phim quốc gia</title>
+  </head>
+
+  <body>
+    <div class="app">
+      <!-- navBar -->
+      <nav class="nav">
+        <img
+          onclick="window.location.href='index.html'"
+          src="./assets/img/logo.png"
+          alt="logo"
+          class="logo"
+          style="cursor: pointer"
+        />
+        <div class="nav__menu">
+          <a href="./index.html">TRANG CHỦ</a>
+          <a href="./introduction.html">GIỚI THIỆU</a>
+          <a href="./showtimes.html">LỊCH CHIẾU</a>
+          <a href="./news.html">TIN TỨC VÀ ƯU ĐÃI</a>
+          <a href="./price.html">GIÁ VÉ</a>
+
+          <div class="nav__right">
+            <a href="">ĐĂNG NHẬP</a>
+            <div class="toggle">
+              <input type="checkbox" hidden class="checkbox" id="checkbox" />
+              <label for="checkbox" class="label">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+                <div class="ball"></div>
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+
+      <!-- homePage -->
+      <div class="home">news</div>
+
+      <!-- footer -->
+      <footer class="footer">footer</footer>
+    </div>
+
+    <script src="./js/nav.js"></script>
+  </body>
+</html>
