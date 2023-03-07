@@ -30,10 +30,6 @@ body {
   transition: 0.5s linear;
 }
 
-/* dark mode css */
-/* body.dark {
-} */
-
 .darkmode {
   background-color: var(--darkModeBg);
   color: white;

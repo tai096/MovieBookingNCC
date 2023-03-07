@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./assets/css/base.css" />
     <link rel="stylesheet" href="./assets/css/nav.css" />
+    <link rel="stylesheet" href="./assets/css/login.css" />
     <link rel="stylesheet" href="./assets/css/home.css" />
     <link rel="stylesheet" href="./assets/css/footer.css" />
     <link rel="stylesheet" href="./assets/css/footer.css" />
@@ -41,7 +42,7 @@
           <a href="./price.html">GIÁ VÉ</a>
 
           <div class="nav__right">
-            <a href="">ĐĂNG NHẬP</a>
+            <a href="#" id="myBtn" onclick="openLoginPopup()">ĐĂNG NHẬP</a>
             <div class="toggle">
               <input
                 type="checkbox"
@@ -66,6 +67,64 @@
         </div>
       </nav>
 
+      <!-- login -->
+      <div id="loginForm" class="popup">
+        <div class="popup-content">
+          <div style="display: flex; justify-content: space-between">
+            <div style="width: 24px"></div>
+            <img
+              src="./assets/svg/Close Button.svg"
+              class="close"
+              onclick="closeLoginPopup()"
+            />
+          </div>
+
+          <div
+            style="
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+            "
+          >
+            <h1 style="color: var(--secondaryRed)">
+              ĐĂNG NHẬP
+              <h1 style="position: absolute; translate: -3px">ĐĂNG NHẬP</h1>
+            </h1>
+
+            <p onclick="openRegisterPopup()">-> Đăng ký thành viên</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- register -->
+      <div id="registerForm" class="popup">
+        <div class="popup-content">
+          <div style="display: flex; justify-content: space-between">
+            <div style="width: 24px"></div>
+            <img
+              src="./assets/svg/Close Button.svg"
+              class="close"
+              onclick="closeRegisterPopup()"
+            />
+          </div>
+
+          <div
+            style="
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+            "
+          >
+            <h1 style="color: var(--secondaryRed)">
+              ĐĂNG KÝ
+              <h1 style="position: absolute; translate: -3px">ĐĂNG KÝ</h1>
+            </h1>
+
+            <p onclick="openLoginPopup()">-> Đã có tài khoản?</p>
+          </div>
+        </div>
+      </div>
+
       <!-- homePage -->
       <div class="home">home</div>
 
@@ -74,5 +133,6 @@
     </div>
 
     <script src="./js/nav.js"></script>
+    <script src="./js/auth.js"></script>
   </body>
 </html>
