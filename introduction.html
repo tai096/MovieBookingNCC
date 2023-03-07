@@ -43,11 +43,17 @@
           <div class="nav__right">
             <a href="">ĐĂNG NHẬP</a>
             <div class="toggle">
-              <input type="checkbox" hidden class="checkbox" id="checkbox" />
+              <input
+                type="checkbox"
+                hidden
+                class="checkbox"
+                id="checkbox"
+                onclick="handleDarkMode()"
+              />
               <label for="checkbox" class="label">
                 <i class="fas fa-moon"></i>
                 <i class="fas fa-sun"></i>
-                <div class="ball"></div>
+                <div class="ball" id="ball"></div>
               </label>
             </div>
           </div>

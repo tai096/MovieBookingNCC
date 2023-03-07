@@ -17,6 +17,11 @@ html {
   --grayBrown: #6a5c54;
   --darkModeBg: #181616;
   --darkModeRed: #c41d25;
+  --clr-light: #fdffc4;
+  --clr-dark: #00332a;
+  --clr-primary: #dbffa2;
+  --clr-secondary: #c3fcf2;
+  --clr-accent: #ff7750;
 }
 
 body {
@@ -26,7 +31,10 @@ body {
 }
 
 /* dark mode css */
-body.dark {
+/* body.dark {
+} */
+
+.darkmode {
   background-color: var(--darkModeBg);
   color: white;
 }
