@@ -9,7 +9,6 @@
     <link rel="stylesheet" href="./assets/css/login.css" />
     <link rel="stylesheet" href="./assets/css/home.css" />
     <link rel="stylesheet" href="./assets/css/footer.css" />
-    <link rel="stylesheet" href="./assets/css/footer.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
@@ -129,10 +128,51 @@
       <div class="home">home</div>
 
       <!-- footer -->
-      <footer class="footer">footer</footer>
+      <footer class="footer" id="footer">
+        <div class="footer__navList">
+          <span onclick="window.location.replace('./index.html')"
+            >Trang chủ</span
+          >
+          <span onclick="window.location.replace('./showtimes.html')"
+            >Lịch chiếu</span
+          >
+          <span onclick="window.location.replace('./news.html')"
+            >Tin tức và Ưu đãi</span
+          >
+          <span onclick="window.location.replace('./price.html')">Giá vé</span>
+          <span>Hỏi đáp</span>
+        </div>
+        <div class="footer__download">
+          <img src="./assets/img/downloadAppStore.png" alt="img" />
+          <img src="./assets/img/downloadGooglePlay.png" alt="img" />
+          <img
+            src="./assets/img/logo_da_thong_bao.png"
+            width="180px"
+            alt="img"
+          />
+        </div>
+        <p class="footer__text">
+          Cơ quan chủ quan: BỘ VĂN HÓA, THỂ THAO VÀ DU LỊCH<br />
+          Bản quyền thuộc Trung tâm Chiếu phim Quốc gia<br />
+          Giấy phép số: 224/GP- TTĐT ngày 31/8/2010 - Chịu trách nhiệm: Vũ Đức
+          Tùng – Quyền Giám đốc<br />
+          Địa chỉ: 87 Láng Hạ, Quận Ba Đình, Tp. Hà Nội - Điện thoại:
+          024.35141791
+        </p>
+        <div class="footer__logo">
+          <img src="./assets/img/logo.png" width="40px" alt="logo" />
+          <img
+            src="./assets/img/Facebook.png"
+            onclick="window.open('https://www.facebook.com/chieuphimquocgiavn/')"
+            alt="logo"
+          />
+          <img src="./assets/img/Gmail.png" alt="logo" />
+        </div>
+      </footer>
     </div>
 
     <script src="./js/nav.js"></script>
     <script src="./js/auth.js"></script>
+    <script src="./js/theme.js"></script>
   </body>
 </html>
