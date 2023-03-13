@@ -16,12 +16,17 @@ a:hover {
 .nav {
   display: flex;
   align-items: center;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
   background-image: linear-gradient(
     to bottom,
     rgba(0, 0, 0, 0.7),
     rgba(0, 0, 0, 0)
   );
   padding: 15px 45px;
+  z-index: 10;
 }
 
 .nav__menu {
@@ -121,6 +126,10 @@ a:hover {
 }
 
 @media (max-width: 900px) {
+  .logo {
+    width: 40px;
+  }
+
   .hamburger {
     display: block;
   }
