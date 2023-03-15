@@ -5,6 +5,7 @@ a {
   color: white;
   border-bottom: 2px solid transparent;
   box-sizing: border-box;
+  cursor: pointer;
 }
 
 a:hover {
