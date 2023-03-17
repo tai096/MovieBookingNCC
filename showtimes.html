@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./assets/css/base.css" />
     <link rel="stylesheet" href="./assets/css/nav.css" />
     <link rel="stylesheet" href="./assets/css/login.css" />
-    <link rel="stylesheet" href="./assets/css/home.css" />
+    <link rel="stylesheet" href="./assets/css/showtimes.css" />
     <link rel="stylesheet" href="./assets/css/footer.css" />
     <link
       rel="stylesheet"
@@ -25,7 +25,7 @@
   <body>
     <div class="app">
       <!-- navBar -->
-      <nav class="nav">
+      <nav class="nav" style="position: sticky">
         <img
           onclick="window.location.href='index.html'"
           src="./assets/img/logo.png"
@@ -124,8 +124,33 @@
         </div>
       </div>
 
-      <!-- homePage -->
-      <div class="home">showtimes</div>
+      <!-- showtimesPage
+      <div class="showtimes">
+        <div
+          class="showtimes__pageTitle"
+          style="text-align: center; margin-top: 16px"
+        >
+          <h1
+            style="font-size: 32px; font-weight: bold; letter-spacing: 0.05em"
+          >
+            LỊCH CHIẾU
+          </h1>
+          <div class="showtimes__pageTitle_icon">
+            <div class="showtimes__pageTitle_line"></div>
+            <img
+              src="./assets/img/Popcorn.png"
+              alt="popcorn-icon"
+              height="40px"
+              width="40px"
+            />
+            <div class="showtimes__pageTitle_line"></div>
+          </div>
+        </div>
+
+        <div class="showtimes__calendar-gridcontainer"></div>
+
+        <div class="showtimes__filmSection"></div>
+      </div> -->
 
       <!-- footer -->
       <footer class="footer" id="footer">
@@ -172,7 +197,7 @@
     </div>
 
     <script src="./js/nav.js"></script>
+    <script src="./js/showtimes.js"></script>
     <script src="./js/auth.js"></script>
-    <script src="./js/theme.js"></script>
   </body>
 </html>

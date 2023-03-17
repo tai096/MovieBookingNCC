@@ -1,0 +1,49 @@
+/* .showtimes__pageTitle_icon {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 340px;
+}
+
+.showtimes__pageTitle_line {
+  margin: 0 12px;
+  width: 30%;
+  height: 2px;
+  background-color: var(--darkBrown);
+}
+
+.showtimes__calendar-gridcontainer {
+  margin: 12px auto;
+  display: grid;
+  justify-content: center;
+  gap: 1px;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.showtimes__calendar_grid-item {
+  cursor: pointer;
+  text-align: center;
+  font-weight: 600;
+  padding: 10px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  transition: 200ms;
+}
+
+.showtimes__calendar_grid-item:hover {
+  background-color: var(--darkBrown);
+  color: white;
+}
+
+.showtimes__calendar_grid-item p {
+  font-size: 16px;
+}
+
+.showtimes__calendar_grid-item h1 {
+  font-size: 24px;
+  font-weight: 600;
+} */
