@@ -23,6 +23,11 @@
     width: calc(120px * 7);
 }
 
+.showtimes__calendar-gridcontainer > div {
+    padding: 5px; 
+    background-color: white;
+}
+
 .showtimes__calendar_grid-item {
     text-align: center;
     font-weight: 600;
@@ -41,4 +46,50 @@
 .showtimes__calendar_grid-item h1 {
     font-size: 24px;
     font-weight: 600;
+}
+
+.showtimes__filmSection {
+    display: flex;
+    margin-left: 128px;
+}
+
+.showtimes__filmSection > div {
+    margin: 24px;
+}
+
+.showtimes_fimlSection_poster img {
+    width: 296px;
+    height: 430px;
+    box-shadow: 1px 3px 5px;
+    border-radius: 20px;
+}
+
+.showtimes_filmSection_description h1 {
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+.showtimes_filmSection_description-list {
+    list-style-type: none;
+}
+
+.showtimes_filmSection_description-list li {
+    margin-bottom: 12px;
+}
+
+.showtimes_filmSection_description-list span:last-child {
+    display: inline-flex;
+    margin-left: 12px;
+    max-width: 314px;
+}
+
+.showtimes_filmSection_description-filmType {
+    width: 113px;
+    background-color: var(--darkBrown);
+    color: white;
+    text-align: center;
+    padding: 4px 0px;
+    font-weight: 600;
+    margin-top: 36px;
 }
