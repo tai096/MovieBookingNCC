@@ -1,8 +1,4 @@
 
-a{
-  margin: 0;
-}
-
 #slider {
   position: relative;
   width: 100%;
@@ -37,7 +33,7 @@ a{
 
 #slider #prev, #slider #next {
   width: 50px;
-  /* line-height: 50px; */
+  margin: 0;
   text-align: center;
   color: white;
   text-decoration: none;
@@ -45,7 +41,6 @@ a{
   top: 50%;
   border-radius: 100%;
   font-size: 30px;
-  /* text-shadow: 0 0 20px rgba(0, 0, 0, 0.6); */
   transform: translateY(-50%);
   transition: all 150ms ease;
 }
