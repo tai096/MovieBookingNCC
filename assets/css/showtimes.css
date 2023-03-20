@@ -25,13 +25,14 @@
     grid-template-columns: 120px 120px 120px 120px 120px 120px 120px;
     justify-content: center;
     gap: 1px;
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: var(--darkBrown);
     width: calc(120px * 7);
 }
 
 .showtimes__calendar-gridcontainer > div {
     padding: 5px; 
     background-color: white;
+    border-bottom: 1px solid var(--darkBrown);
 }
 
 .showtimes__calendar_grid-item {
@@ -44,6 +45,12 @@
     background-color: #ffffff;
 }
 
+.showtimes__calendar_grid-item:hover {
+    color: white;
+    background-color: var(--darkBrown);
+    border-radius: 12px;
+    cursor: pointer;
+}
 
 .showtimes__calendar_grid-item p {
     font-size: 16px;
@@ -58,8 +65,8 @@
     display: flex;
     margin: 20px 0;
     justify-content: space-around;
-    /* flex-wrap: wrap; */
     width: 80%;
+    flex-wrap: wrap;
 }
 
 .showtimes__filmSection > div {
@@ -71,6 +78,10 @@
     height: 430px;
     box-shadow: 1px 3px 5px;
     border-radius: 20px;
+}
+
+.showtimes__filmSection_description {
+    width: 460px;
 }
 
 .showtimes__filmSection_description h1 {
@@ -122,12 +133,72 @@
     font-size: 20px;
     border: 2px solid var(--darkBrown);
     border-radius: 5px;
-    opacity: 85%;
 }
 
 .showtimes__filmSection_timeBtn:hover {
     color: var(--secondaryRed);
     border-color: var(--secondaryRed);
-    opacity: 100%;
     cursor: pointer;
+}
+
+/* RESPONSIVE */
+/* Tablet */
+@media (max-width: 1024px) {
+    .showtimes__filmSection_description {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+}
+
+/* Mobile */
+@media (max-width: 740px) {
+  .showtimes__calendar_outside {
+    width: 360px;  
+    overflow: hidden;
+  }
+
+  .showtimes__calendar-gridcontainer {
+    width: 420px;
+    overflow: scroll;
+    justify-content: flex-start;
+  }
+
+  .showtimes__calendar_grid-item h1 {
+    font-size: 18px;
+  }
+
+  .showtimes__calendar_grid-item p {
+    font-size: 14px;
+  }
+
+  .showtimes__fimlSection_poster img {
+    width: 330px;
+  }
+
+  .showtimes__filmSection_description {
+    margin-top: 0px !important;
+  }
+  
+  .showtimes__filmSection_description h1 {
+    font-size: 28px;
+  }
+
+  .showtimes__filmSection_description-filmType {
+    margin-top: 12px;
+  }
+
+  .showtimes__filmSection_times {
+    gap: 8px;
+    margin-top: 0px !important;
+  }
+
+  .showtimes__filmSection_timeBtn {
+    font-size: 16px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+
 }
