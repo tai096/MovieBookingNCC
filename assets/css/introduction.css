@@ -1,12 +1,12 @@
-*{
+/* *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+} */
 
 div.introduction{
-    width: 1043px;
-     margin:auto;
+    width: 70%;
+    margin: auto;
 }
 
 div.introduction__title{
@@ -32,44 +32,138 @@ div.introduction__title img{
     background-color: white;
     padding: 0 56px;
 }
-.block.block1{
-    margin-top: 50px;
+
+
+/* hết img header */
+
+.big_block{
+    margin-top: 65px;
 }
-.block .block__title{
+.big_block .block_title {
     font-size: 24px;
+    text-transform: uppercase;
+    margin-bottom: 32px;
+    margin-left: 25px;
 }
-/* slide */
-.slideshow {
+.block1{
+    display: flex;
+    flex-direction: row;
+}
+
+.slide-wrapper_right {
+    width: 487px;
+    height: 304px;
     overflow: hidden;
-    width: 445px;
-    height: 304px;
-    
+    position: relative;  ;
 }
 
-.slide-wrapper {
-    width: 2225px;
-    -webkit-animation:slide  10s ease infinite;
-    
+.slide-wrapper_right.withline{
+    padding-right: 42px;
+    border-right: 2px solid var(--darkBrown);
+
 }
-.slide-wrapper .slide{
+
+.slide-wrapper_right .slide{
     width: 445px;
     height: 304px;
-    float: left;
     border-radius: 40px;
+    top: 0;
+    left: 0;
+    background: #000;
+    visibility: hidden;
+    opacity: 0;
+    animation: slider 20s linear infinite;
+
 }
 
+.slide-wrapper_right .slide:nth-child(1){
+    animation-delay: 0s;
+}
+
+.slide-wrapper_right .slide:nth-child(2){
+    animation-delay: 4s;
+}
+
+.slide-wrapper_right .slide:nth-child(3){
+    animation-delay: 8s;
+}
+
+.slide-wrapper_right .slide:nth-child(4){
+    animation-delay: 12s;
+}
 .slide .info_img{
     width: 445px;
     height: 304px;
     border-radius: 40px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+
 }
 
-@-webkit-keyframes slide{
-    20% {margin-left: 0px;}
-    30% {margin-left: -445px;}
-    50% {margin-left: -445px;}
-    60% {margin-left: -890px;}
-    80% {margin-left: -890px;}
-    90% {margin-left: -1335px;}
-    110% {margin-left: -1335px;}
+@keyframes slider{
+    0%
+    {
+        visibility: hidden;
+        opacity: 0;
+    }
+    
+    2%
+    {
+        visibility: visible;
+        opacity: 1;
+    }
+    
+    18%
+    {
+        visibility: visible;
+        opacity: 1;
+    }
+    
+    20%,100%
+    {
+        visibility: hidden;
+        opacity: 0;
+    }
+}
+
+.column1 .picture_note{
+    padding-left: 150px;
+    padding-top: 15px;
+    font-size: 14px;
+    font-style: italic;
+    font-weight: 300;
+}
+
+.block_para{
+    margin-left: 54px;
+    width: 489px;
+    height: 309px;
+    font-size: 18px;
+    font-weight: 600;
+    text-align: justify;
+}
+
+.dashline{
+    position: relative;
+    left: 315px;
+    width: 358px;
+    height: 2px;
+    border-bottom: 2px dashed var(--darkBrown);
+    margin-top: 40px;
+}
+
+.block2{
+    margin-top: 31px;
+}
+
+.block2 .column1 img{
+    width: 300px;
+}
+
+@media (max-width: 1024px) {
+    div.introduction{
+        width: 90%;
+    }
 }
