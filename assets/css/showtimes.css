@@ -118,11 +118,11 @@
 
 .showtimes__filmSection_times {
     max-height: 120px;
-    display: grid;
-    grid-template-columns: auto auto auto auto;
+    width: 480px;
+    display: flex;
     gap: 16px;
-    justify-content: space-around;
-    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: wrap;
 }
 
 .showtimes__filmSection_timeBtn {
@@ -136,8 +136,8 @@
 }
 
 .showtimes__filmSection_timeBtn:hover {
-    color: var(--secondaryRed);
-    border-color: var(--secondaryRed);
+    color: var(--primaryRed);
+    border-color: var(--primaryRed);
     cursor: pointer;
 }
 
@@ -173,12 +173,17 @@
     font-size: 14px;
   }
 
+  .showtimes__filmSection {
+    width: 100%;
+  }
+
   .showtimes__fimlSection_poster img {
     width: 330px;
   }
 
   .showtimes__filmSection_description {
     margin-top: 0px !important;
+    width: 80%;
   }
   
   .showtimes__filmSection_description h1 {
@@ -190,8 +195,10 @@
   }
 
   .showtimes__filmSection_times {
+    width: 364px;
     gap: 8px;
     margin-top: 0px !important;
+    justify-content: center;
   }
 
   .showtimes__filmSection_timeBtn {
