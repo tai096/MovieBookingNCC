@@ -1,4 +1,23 @@
-.control button {
-  margin: 20px;
+.home__control {
+  margin: 40px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home__control_btn {
+  font-family: "Montserrat", sans-serif;
+  color: #000;
+  font-weight: bold;
+  font-size: 20px;
   cursor: pointer;
+  border-radius: 22px;
+  padding: 18px;
+  background: none;
+  border: 3px solid var(--primaryRed);
+  transition: 500ms;
+}
+
+.home__control_btn:hover {
+  background: var(--primaryRed);
 }
