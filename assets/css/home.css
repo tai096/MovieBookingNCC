@@ -29,12 +29,43 @@
   background: var(--primaryRed);
 }
 
+.home__movies {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home__movies_list {
+  width: 90%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.home__movies_list-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home__movies_list-item_img {
+  width: 280px;
+  border-radius: 20px;
+  box-shadow: 1px 3px 5px 2px rgba(0, 0, 0, 0.3);
+}
+
+.home__movies_list-item_name {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 16px 0;
+}
+
 @media (max-width: 600px) {
   .home__control_line {
     margin: 0 20px;
   }
   .home__control_btn {
     font-size: 16px;
+
     border-radius: 18px;
     padding: 14px;
   }
