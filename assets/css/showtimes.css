@@ -24,8 +24,6 @@
     display: grid;
     grid-template-columns: 120px 120px 120px 120px 120px 120px 120px;
     justify-content: center;
-    gap: 1px;
-    background-color: var(--darkBrown);
     width: calc(120px * 7);
 }
 
@@ -33,6 +31,11 @@
     padding: 5px; 
     background-color: white;
     border-bottom: 1px solid var(--darkBrown);
+    border-right: 1px solid var(--darkBrown);
+}
+
+.showtimes__calendar-gridcontainer > div:last-child {
+  border-right: none;
 }
 
 .showtimes__calendar_grid-item {
@@ -156,12 +159,13 @@
 @media (max-width: 740px) {
   .showtimes__calendar_outside {
     width: 80%;  
-    overflow: hidden;
+    overflow: scroll;
   }
 
   .showtimes__calendar-gridcontainer {
     width: 420px;
-    overflow: scroll;
+    overflow: visible;
+    grid-template-columns: repeat(7, 100px);
     justify-content: flex-start;
   }
 
@@ -213,4 +217,10 @@
   }
 
 
+}
+
+@media(max-width: 325px) {
+  .showtimes__calendar-gridcontainer {
+    grid-template-columns: repeat(7, 85px);
+  }
 }
