@@ -65,7 +65,7 @@
     display: flex;
     margin: 20px 0;
     justify-content: space-around;
-    width: 80%;
+    width: 90%;
     flex-wrap: wrap;
 }
 
@@ -155,7 +155,7 @@
 /* Mobile */
 @media (max-width: 740px) {
   .showtimes__calendar_outside {
-    width: 360px;  
+    width: 80%;  
     overflow: hidden;
   }
 
@@ -177,8 +177,13 @@
     width: 100%;
   }
 
+  .showtimes__fimlSection_poster {
+    display: flex;
+    justify-content: center;
+  }
+
   .showtimes__fimlSection_poster img {
-    width: 330px;
+    width: 90%;
   }
 
   .showtimes__filmSection_description {
