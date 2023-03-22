@@ -6,7 +6,9 @@
   font-size: 100%;
 }
 
-html {
+html,
+button,
+body {
   font-family: "Montserrat", sans-serif;
 }
 
@@ -23,6 +25,10 @@ body {
   background-color: white;
   color: var(--darkBrown);
   transition: 0.5s linear;
+}
+
+button {
+  cursor: pointer;
 }
 
 .darkmode {
