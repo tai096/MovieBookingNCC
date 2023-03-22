@@ -28,17 +28,14 @@
 
 #slider #prev,
 #slider #next {
-  width: 50px;
-  margin: 0;
-  text-align: center;
+  opacity: 60%;
   color: white;
   text-decoration: none;
   position: absolute;
-  top: 50%;
+  top: 40%;
   border-radius: 100%;
-  font-size: 30px;
-  transform: translateY(-50%);
-  transition: all 150ms ease;
+  padding: 8px;
+  transition: all 200ms ease;
 }
 
 #slider #prev {
@@ -46,12 +43,28 @@
   left: 10px;
 }
 #slider #next {
+  rotate: 180deg;
   border: none;
   right: 10px;
 }
 
 #slider #prev:hover,
 #slider #next:hover {
+  opacity: 100%;
   background-color: rgba(0, 0, 0, 0.208);
   text-shadow: 0;
+}
+
+@media (max-width: 600px) {
+  #slider #prev,
+  #slider #next {
+    width: 20px;
+  }
+
+  #slider #prev {
+    left: 5px;
+  }
+  #slider #next {
+    right: 5px;
+  }
 }
