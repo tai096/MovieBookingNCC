@@ -1,13 +1,11 @@
 const sliders = document.querySelector(".home__movies_carousel-list");
-const switchLeft = document.getElementById("switchLeft");
-const switchRight = document.getElementById("switchRight");
 
-var scrollPerClick = 500;
-
-var scrollAmount = 0;
-
-let showSwitchLeft = "none";
-switchLeft.style.display = showSwitchLeft;
+let scrollPerClick = 500;
+let scrollAmount = 0;
+const maxScroll = sliders.scrollWidth - sliders.clientWidth;
+let isDown = false;
+let startX;
+let scrollLeft;
 
 const sliderScrollLeft = () => {
   sliders.scrollTo({
@@ -15,26 +13,40 @@ const sliderScrollLeft = () => {
     left: (scrollAmount -= scrollPerClick),
     behavior: "smooth",
   });
-  switchRight.style.display = "block";
 
   if (scrollAmount <= 0) {
     scrollAmount = 0;
-    showSwitchLeft = "none";
-    switchLeft.style.display = showSwitchLeft;
   }
 };
 
 const sliderScrollRight = () => {
-  console.log(scrollAmount);
-  if (scrollAmount <= sliders.scrollWidth - sliders.clientWidth) {
+  if (scrollAmount <= maxScroll) {
     sliders.scrollTo({
       top: 0,
       left: (scrollAmount += scrollPerClick),
       behavior: "smooth",
     });
-    showSwitchLeft = "block";
-    switchLeft.style.display = showSwitchLeft;
-  } else {
-    switchRight.style.display = "none";
   }
 };
+
+sliders.addEventListener("mousedown", (e) => {
+  isDown = true;
+  sliders.classList.add("active");
+  startX = e.pageX - sliders.offsetLeft;
+  scrollLeft = sliders.scrollLeft;
+});
+sliders.addEventListener("mouseleave", () => {
+  isDown = false;
+  sliders.classList.remove("active");
+});
+sliders.addEventListener("mouseup", () => {
+  isDown = false;
+  sliders.classList.remove("active");
+});
+sliders.addEventListener("mousemove", (e) => {
+  if (!isDown) return;
+  e.preventDefault();
+  const x = e.pageX - sliders.offsetLeft;
+  const walk = (x - startX) * 3; //scroll-fast
+  sliders.scrollLeft = scrollLeft - walk;
+});
