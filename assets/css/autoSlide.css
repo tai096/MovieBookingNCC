@@ -28,6 +28,7 @@
 
 #slider #prev,
 #slider #next {
+  cursor: pointer;
   opacity: 60%;
   color: white;
   text-decoration: none;
