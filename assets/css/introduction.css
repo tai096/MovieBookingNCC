@@ -45,25 +45,21 @@ div.introduction__title img{
     margin-bottom: 32px;
     margin-left: 25px;
 }
-.block1{
+
+.block{
     display: flex;
     flex-direction: row;
 }
-
-.slide-wrapper_right {
-    width: 487px;
+.slide-wrapper {
+    width: 445px;
     height: 304px;
     overflow: hidden;
-    position: relative;  ;
+    position: relative;
+    border-radius: 45px;
+    border: 5px solid var(--primaryRed);  
 }
 
-.slide-wrapper_right.withline{
-    padding-right: 42px;
-    border-right: 2px solid var(--darkBrown);
-
-}
-
-.slide-wrapper_right .slide{
+.slide-wrapper .slide{
     width: 445px;
     height: 304px;
     border-radius: 40px;
@@ -73,33 +69,39 @@ div.introduction__title img{
     visibility: hidden;
     opacity: 0;
     animation: slider 20s linear infinite;
+    
 
 }
 
-.slide-wrapper_right .slide:nth-child(1){
+.slide-wrapper .slide:nth-child(1){
     animation-delay: 0s;
 }
 
-.slide-wrapper_right .slide:nth-child(2){
+.slide-wrapper .slide:nth-child(2){
     animation-delay: 4s;
 }
 
-.slide-wrapper_right .slide:nth-child(3){
+.slide-wrapper .slide:nth-child(3){
     animation-delay: 8s;
 }
 
-.slide-wrapper_right .slide:nth-child(4){
+.slide-wrapper .slide:nth-child(4){
     animation-delay: 12s;
 }
 .slide .info_img{
-    width: 445px;
-    height: 304px;
-    border-radius: 40px;
     position: absolute;
     top: 0;
     left: 0;
     object-fit: cover;
+    border: none;
+}
 
+.info_img{
+    width: 445px;
+    height: 304px;
+    border-radius: 40px;
+    padding: 0;
+    border: 5px solid var(--primaryRed);
 }
 
 @keyframes slider{
@@ -128,8 +130,8 @@ div.introduction__title img{
     }
 }
 
-.column1 .picture_note{
-    padding-left: 150px;
+.picture_note{
+    padding-left: 140px;
     padding-top: 15px;
     font-size: 14px;
     font-style: italic;
@@ -137,12 +139,14 @@ div.introduction__title img{
 }
 
 .block_para{
-    margin-left: 54px;
+    padding-left: 54px;
     width: 489px;
     height: 309px;
     font-size: 18px;
     font-weight: 600;
     text-align: justify;
+    border-left: 2px solid var(--darkBrown);
+    margin-left: 42px;
 }
 
 .dashline{
@@ -154,16 +158,32 @@ div.introduction__title img{
     margin-top: 40px;
 }
 
-.block2{
+.block.block2{
     margin-top: 31px;
+    position: relative;
 }
 
-.block2 .column1 img{
-    width: 300px;
+.block2.special .column1 img{
+    width: 416px;
+}
+.block2.special .column2{
+    top: 63px;
+}
+.column2{
+    position: absolute;
+    right: 30px;
 }
 
-@media (max-width: 1024px) {
-    div.introduction{
-        width: 90%;
-    }
+.block.block3{
+    margin-top: 84px;
+    position: relative;
+    margin-bottom: 180px;
 }
+
+.block3 .column1{
+}
+
+
+    
+
+
