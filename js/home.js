@@ -1,6 +1,6 @@
 const sliders = document.querySelector(".home__movies_carousel-list");
 
-let scrollPerClick = 500;
+let scrollPerClick = 400;
 let scrollAmount = 0;
 const maxScroll = sliders.scrollWidth - sliders.clientWidth;
 let isDown = false;
@@ -47,6 +47,6 @@ sliders.addEventListener("mousemove", (e) => {
   if (!isDown) return;
   e.preventDefault();
   const x = e.pageX - sliders.offsetLeft;
-  const walk = (x - startX) * 3; //scroll-fast
+  const walk = x - startX; //scroll-fast
   sliders.scrollLeft = scrollLeft - walk;
 });

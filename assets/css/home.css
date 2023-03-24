@@ -20,7 +20,7 @@
 }
 
 .home__control_btn {
-  color: #000;
+  color: var(--darkBrown);
   font-weight: bold;
   font-size: 20px;
   border-radius: 22px;
@@ -32,6 +32,21 @@
 
 .home__control_btn:hover {
   background: var(--primaryRed);
+  color: white;
+}
+
+.home__showMore {
+  width: 120px;
+  background: none;
+  font-weight: 600;
+  color: var(--darkBrown);
+  text-align: center;
+  margin-bottom: 35px;
+  transition: 300ms;
+}
+
+.home__showMore:hover {
+  color: var(--primaryRed);
 }
 
 .home__movies_list-item {
@@ -71,6 +86,10 @@
 }
 
 .home__movies_carousel {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  max-width: 1280px;
   width: 95%;
   position: relative;
 }
@@ -85,7 +104,7 @@
   opacity: 50%;
   z-index: 3;
   position: absolute;
-  top: 35%;
+  top: 40%;
   transition: 300ms;
   border-radius: 100%;
   background-color: #0000009c;
@@ -157,9 +176,18 @@
   .home__movies_carousel .switchRight {
     right: -10px;
   }
+
+  .home__showMore {
+    font-size: 13px;
+  }
 }
 
 @media (max-width: 600px) {
+  .home__showMore {
+    width: 90px;
+    margin: 15px 0;
+  }
+
   .home__control_line {
     margin: 0 20px;
   }

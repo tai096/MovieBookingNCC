@@ -27,7 +27,7 @@ a:hover {
     rgba(0, 0, 0, 0)
   );
   padding: 15px 45px;
-  z-index: 10;
+  z-index: 20;
 }
 
 .nav__menu {
