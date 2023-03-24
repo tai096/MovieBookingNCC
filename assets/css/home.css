@@ -67,6 +67,10 @@
   font-size: 20px;
   font-weight: 600;
   margin: 16px 0;
+  white-space: nowrap;
+  width: 250px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .home__movies_list-item_btn {
@@ -212,9 +216,11 @@
     margin: 0 12px;
     height: 40px;
   }
+
   .home__control {
     margin: 20px 0;
   }
+
   .home__control_btn {
     font-size: 15px;
     border-radius: 17px;
