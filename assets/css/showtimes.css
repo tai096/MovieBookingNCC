@@ -81,6 +81,9 @@
     height: 430px;
     box-shadow: 1px 3px 5px;
     border-radius: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
 
 .showtimes__filmSection_description {
@@ -145,23 +148,43 @@
 }
 
 /* RESPONSIVE */
-/* Tablet */
+/* Tablet and Mobile*/
 @media (max-width: 1024px) {
-    .showtimes__filmSection_description {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-}
-
-/* Mobile */
-@media (max-width: 740px) {
   .showtimes__calendar_outside {
     width: 80%;  
     overflow: scroll;
   }
+  
+  .showtimes__calendar-gridcontainer {
+    overflow: visible;
+    justify-content: flex-start;
+  }
+  
+  .showtimes__filmSection_description {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+  }
 
+  .showtimes__filmSection_description h1 {
+    font-size: 28px;
+  }
+
+}
+
+/* Tablet */
+@media (min-width: 740px) and (max-width: 1024px){
+  .showtimes__fimlSection_poster {
+    width: 50%;
+  }
+
+  .showtimes__filmSection_description {
+    width: 50%;
+  } 
+}
+
+/* Mobile */
+@media (max-width: 740px) {
   .showtimes__calendar-gridcontainer {
     width: 420px;
     overflow: visible;
@@ -190,13 +213,14 @@
     width: 90%;
   }
 
+  .showtimes__filmSection_description h1 {
+    text-align: center;
+  }
+
   .showtimes__filmSection_description {
     margin-top: 0px !important;
     width: 80%;
-  }
-  
-  .showtimes__filmSection_description h1 {
-    font-size: 28px;
+    align-items: center;
   }
 
   .showtimes__filmSection_description-filmType {
@@ -219,7 +243,7 @@
 
 }
 
-@media(max-width: 325px) {
+@media (max-width: 325px) {
   .showtimes__calendar-gridcontainer {
     grid-template-columns: repeat(7, 85px);
   }
