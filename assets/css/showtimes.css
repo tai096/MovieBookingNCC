@@ -84,6 +84,7 @@
     margin-left: auto;
     margin-right: auto;
     display: block;
+    object-fit: cover;
 }
 
 .showtimes__filmSection_description {
@@ -207,10 +208,6 @@
   .showtimes__fimlSection_poster {
     display: flex;
     justify-content: center;
-  }
-
-  .showtimes__fimlSection_poster img {
-    width: 90%;
   }
 
   .showtimes__filmSection_description h1 {
