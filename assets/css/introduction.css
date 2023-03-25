@@ -94,12 +94,13 @@ div.introduction__title img{
     left: 0;
     object-fit: cover;
     border: none;
+    border-radius: 40px;
 }
 
 .info_img{
     width: 445px;
     height: 304px;
-    border-radius: 40px;
+    border-radius: 45px;
     padding: 0;
     border: 5px solid var(--primaryRed);
 }
@@ -131,11 +132,11 @@ div.introduction__title img{
 }
 
 .picture_note{
-    padding-left: 140px;
     padding-top: 15px;
     font-size: 14px;
     font-style: italic;
     font-weight: 300;
+    text-align: center;
 }
 
 .block_para{
@@ -180,7 +181,8 @@ div.introduction__title img{
     margin-bottom: 180px;
 }
 
-.block3 .column1{
+.different{
+    border-radius:45px 45px 0 45px ;
 }
 
 
