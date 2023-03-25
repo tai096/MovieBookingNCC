@@ -1,37 +1,37 @@
 .showtimes {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .showtimes__pageTitle_icon {
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    max-width: 340px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 340px;
 }
 
 .showtimes__pageTitle_line {
-    margin: 0 12px;
-    width: 30%;
-    height: 2px;
-    background-color: var(--darkBrown);
+  margin: 0 12px;
+  width: 30%;
+  height: 2px;
+  background-color: var(--darkBrown);
 }
 
 .showtimes__calendar-gridcontainer {
-    margin: 12px auto;
-    display: grid;
-    grid-template-columns: 120px 120px 120px 120px 120px 120px 120px;
-    justify-content: center;
-    width: calc(120px * 7);
+  margin: 12px auto;
+  display: grid;
+  grid-template-columns: 120px 120px 120px 120px 120px 120px 120px;
+  justify-content: center;
+  width: calc(120px * 7);
 }
 
 .showtimes__calendar-gridcontainer > div {
-    padding: 5px; 
-    background-color: white;
-    border-bottom: 1px solid var(--darkBrown);
-    border-right: 1px solid var(--darkBrown);
+  padding: 5px; 
+  background-color: white;
+  border-bottom: 1px solid var(--darkBrown);
+  border-right: 1px solid var(--darkBrown);
 }
 
 .showtimes__calendar-gridcontainer > div:last-child {
@@ -39,113 +39,113 @@
 }
 
 .showtimes__calendar_grid-item {
-    text-align: center;
-    font-weight: 600;
-    padding: 10px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #ffffff;
+  text-align: center;
+  font-weight: 600;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
 }
 
 .showtimes__calendar_grid-item:hover {
-    color: white;
-    background-color: var(--darkBrown);
-    border-radius: 12px;
-    cursor: pointer;
+  color: white;
+  background-color: var(--darkBrown);
+  border-radius: 12px;
+  cursor: pointer;
 }
 
 .showtimes__calendar_grid-item p {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 .showtimes__calendar_grid-item h1 {
-    font-size: 24px;
-    font-weight: 600;
+  font-size: 24px;
+  font-weight: 600;
 }
 
 .showtimes__filmSection {
-    display: flex;
-    margin: 20px 0;
-    justify-content: space-around;
-    width: 90%;
-    flex-wrap: wrap;
+  display: flex;
+  margin: 20px 0;
+  justify-content: space-around;
+  width: 90%;
+  flex-wrap: wrap;
 }
 
 .showtimes__filmSection > div {
-    margin: 16px 0;
+  margin: 16px 0;
 }
 
 .showtimes__fimlSection_poster img {
-    width: 296px;
-    height: 430px;
-    box-shadow: 1px 3px 5px;
-    border-radius: 20px;
-    margin-left: auto;
-    margin-right: auto;
-    display: block;
-    object-fit: cover;
+  width: 296px;
+  height: 430px;
+  box-shadow: 1px 3px 5px;
+  border-radius: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  object-fit: cover;
 }
 
 .showtimes__filmSection_description {
-    width: 460px;
+  width: 460px;
 }
 
 .showtimes__filmSection_description h1 {
-    font-size: 36px;
-    font-weight: 600;
-    margin-bottom: 24px;
+  font-size: 36px;
+  font-weight: 600;
+  margin-bottom: 24px;
 }
 
 .showtimes__filmSection_description-list,
 .showtimes__filmSection_description-filmType ul {
-    list-style-type: none;
-    max-width: 22em;
+  list-style-type: none;
+  max-width: 22em;
 }
 
 .showtimes__filmSection_description-list li {
-    margin-bottom: 12px;
+  margin-bottom: 12px;
 }
 
 .showtimes_filmSection_description-list span:last-child {
-    display: inline-flex;
-    margin-left: 12px;
-    max-width: 314px;
+  display: inline-flex;
+  margin-left: 12px;
+  max-width: 314px;
 }
 
 .showtimes__filmSection_description-filmType {
-    width: 113px;
-    background-color: var(--darkBrown);
-    color: white;
-    text-align: center;
-    padding: 4px 0px;
-    font-weight: 600;
-    margin-top: 36px;
+  width: 113px;
+  background-color: var(--darkBrown);
+  color: white;
+  text-align: center;
+  padding: 4px 0px;
+  font-weight: 600;
+  margin-top: 36px;
 }
 
 .showtimes__filmSection_times {
-    max-height: 120px;
-    width: 480px;
-    display: flex;
-    gap: 16px;
-    justify-content: flex-start;
-    flex-wrap: wrap;
+  max-height: 120px;
+  width: 480px;
+  display: flex;
+  gap: 16px;
+  justify-content: flex-start;
+  flex-wrap: wrap;
 }
 
 .showtimes__filmSection_timeBtn {
-    background-color: white;
-    color: var(--darkBrown);
-    height: 46px;
-    padding: 12px 25px;
-    font-size: 20px;
-    border: 2px solid var(--darkBrown);
-    border-radius: 5px;
+  background-color: white;
+  color: var(--darkBrown);
+  height: 46px;
+  padding: 12px 25px;
+  font-size: 20px;
+  border: 2px solid var(--darkBrown);
+  border-radius: 5px;
 }
 
 .showtimes__filmSection_timeBtn:hover {
-    color: var(--primaryRed);
-    border-color: var(--primaryRed);
-    cursor: pointer;
+  color: var(--primaryRed);
+  border-color: var(--primaryRed);
+  cursor: pointer;
 }
 
 /* RESPONSIVE */
@@ -162,9 +162,9 @@
   }
   
   .showtimes__filmSection_description {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
   }
 
   .showtimes__filmSection_description h1 {
