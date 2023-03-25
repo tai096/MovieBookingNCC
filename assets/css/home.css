@@ -69,8 +69,8 @@
   font-size: 20px;
   font-weight: 600;
   margin: 16px 0;
-  white-space: nowrap;
   width: 250px;
+  white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -147,11 +147,105 @@
   z-index: 2;
 }
 
+.home__news {
+  margin-top: 90px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home__news_header {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.home__news_header-name {
+  margin-bottom: 15px;
+  font-size: 24px;
+}
+
+.home__news_header-logo {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home__news_header-logo img {
+  margin: 0 20px;
+}
+
+.home__news_header-line {
+  width: 35%;
+  height: 2.5px;
+  background-color: var(--darkBrown);
+}
+
+.home__news_contents {
+  max-width: 1280px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.home__news_contents-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.home__news_contents-item img {
+  width: 400px;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 1px 3px 5px 2px rgba(0, 0, 0, 0.3);
+}
+
+.home__news_contents-item-content {
+  width: 380px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 10px 0;
+}
+
+.home__news_contents-item-btn {
+  border: 2px solid var(--primaryRed);
+  color: white;
+  cursor: pointer;
+  background: var(--primaryRed);
+  font-weight: 600;
+  padding: 8px 20px;
+  border-radius: 30px;
+  transition: 300ms;
+  font-size: 14px;
+}
+
+.home__news_contents-item-btn:hover {
+  background: white;
+  color: var(--primaryRed);
+}
 @media (max-width: 1024px) {
   .home__movies_carousel {
     width: 95%;
     padding: 0;
     position: relative;
+  }
+
+  .home__news_contents {
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+
+  .home__news_contents-item {
+    margin: 20px;
   }
 }
 
@@ -209,9 +303,28 @@
   .home__movies_list-item_name {
     font-size: 18px;
   }
+
+  .home__news_header-name {
+    margin-bottom: 12px;
+    font-size: 18px;
+  }
+
+  .home__news_header-logo img {
+    width: 40px;
+    margin: 0 15px;
+  }
 }
 
 @media (max-width: 450px) {
+  .home__news_contents-item img {
+    width: 280px;
+    height: 170px;
+  }
+
+  .home__news_contents-item-content {
+    width: 250px;
+  }
+
   .home__movies_carousel {
     width: 98%;
   }

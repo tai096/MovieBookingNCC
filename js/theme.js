@@ -2,6 +2,7 @@ const ball = document.getElementById("ball");
 const footer = document.getElementById("footer");
 const controlBtns = document.querySelectorAll(".home__control_btn");
 const showMoreBtns = document.querySelectorAll(".home__showMore");
+const homeNewsLines = document.querySelectorAll(".home__news_header-line");
 
 const handleDarkMode = () => {
   const setTheme = document.body;
@@ -13,6 +14,11 @@ const handleDarkMode = () => {
     theme = "darkMode";
     ball.style.transform = "translate(39px)";
     footer.style.background = "transparent";
+
+    homeNewsLines.forEach((homeNewsLine) => {
+      homeNewsLine.style.background = "white";
+    });
+
     controlBtns.forEach((controlBtn) => {
       controlBtn.style.color = "white";
       controlBtn.addEventListener("mouseover", () => {
@@ -22,6 +28,7 @@ const handleDarkMode = () => {
         controlBtn.style.color = "white";
       });
     });
+
     showMoreBtns.forEach((showMoreBtn) => {
       showMoreBtn.style.color = "white";
       showMoreBtn.addEventListener("mouseover", () => {
@@ -35,6 +42,11 @@ const handleDarkMode = () => {
     theme = "lightMode";
     ball.style.transform = "translate(0px)";
     footer.style.background = "var(--darkBrown)";
+
+    homeNewsLines.forEach((homeNewsLine) => {
+      homeNewsLine.style.background = "var(--darkBrown)";
+    });
+
     controlBtns.forEach((controlBtn) => {
       controlBtn.style.color = "var(--darkBrown)";
       controlBtn.addEventListener("mouseover", () => {
@@ -44,6 +56,7 @@ const handleDarkMode = () => {
         controlBtn.style.color = "var(--darkBrown)";
       });
     });
+
     showMoreBtns.forEach((showMoreBtn) => {
       showMoreBtn.style.color = "var(--darkBrown)";
       showMoreBtn.addEventListener("mouseover", () => {
@@ -64,6 +77,11 @@ if (getTheme === "darkMode") {
   document.body.classList = "darkmode";
   ball.style.transform = "translate(39px)";
   footer.style.background = "transparent";
+
+  homeNewsLines.forEach((homeNewsLine) => {
+    homeNewsLine.style.background = "white";
+  });
+
   controlBtns.forEach((controlBtn) => {
     controlBtn.style.color = "white";
     controlBtn.addEventListener("mouseover", () => {
