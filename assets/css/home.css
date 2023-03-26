@@ -1,5 +1,5 @@
 .home {
-  margin-bottom: 40px;
+  margin-bottom: 150px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -165,7 +165,7 @@
 }
 
 .home__news_header-name {
-  margin-bottom: 15px;
+  /* margin-bottom: 15px; */
   font-size: 24px;
 }
 
@@ -232,6 +232,14 @@
   background: white;
   color: var(--primaryRed);
 }
+
+.home__news_header-block {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
 @media (max-width: 1024px) {
   .home__movies_carousel {
     width: 95%;
@@ -285,6 +293,10 @@
 }
 
 @media (max-width: 600px) {
+  .home {
+    margin-bottom: 80px;
+  }
+
   .home__showMore {
     width: 90px;
     margin: 15px 0;
@@ -305,7 +317,7 @@
   }
 
   .home__news_header-name {
-    margin-bottom: 12px;
+    /* margin-bottom: 12px; */
     font-size: 18px;
   }
 
@@ -387,5 +399,13 @@
 
   .home__movies_list-item_btn {
     font-size: 13px;
+  }
+
+  .home__news_header-block {
+    justify-content: center;
+  }
+
+  .home__news_header .home__showMore {
+    display: none;
   }
 }
