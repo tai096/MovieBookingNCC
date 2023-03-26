@@ -1,9 +1,7 @@
-/* *{
+*{
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-} */
-
+}
 div.introduction{
     width: 70%;
     margin: auto;
@@ -55,81 +53,209 @@ div.introduction__title img{
     height: 304px;
     overflow: hidden;
     position: relative;
-    border-radius: 45px;
-    border: 5px solid var(--primaryRed);  
+    border-radius: 40px;
+    border: 5px solid var(--primaryRed); 
 }
 
 .slide-wrapper .slide{
-    width: 445px;
-    height: 304px;
-    border-radius: 40px;
-    top: 0;
-    left: 0;
-    background: #000;
-    visibility: hidden;
-    opacity: 0;
-    animation: slider 20s linear infinite;
-    
-
-}
-
-.slide-wrapper .slide:nth-child(1){
-    animation-delay: 0s;
-}
-
-.slide-wrapper .slide:nth-child(2){
-    animation-delay: 4s;
-}
-
-.slide-wrapper .slide:nth-child(3){
-    animation-delay: 8s;
-}
-
-.slide-wrapper .slide:nth-child(4){
-    animation-delay: 12s;
-}
-.slide .info_img{
+    width: 100%;
+    height: 100%;
     position: absolute;
-    top: 0;
-    left: 0;
-    object-fit: cover;
-    border: none;
-    border-radius: 40px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.slide-wrapper.different {
+    border-radius: 40px 40px 0 40px;
+}
+
+.slide1{
+    background-image: url(../img/1-1.jpg);
+    animation: fade1 18s infinite;
+}
+
+.slide2{
+    background-image: url(../img/1-2.jpg);
+    animation: fade2 18s infinite;
+}
+
+.slide3{
+    background-image: url(../img/1-3.jpg);
+    animation: fade3 18s infinite;
+}
+
+.slide4{
+    background-image: url(../img/1-4.jpg);
+    animation: fade4 18s infinite;
+}
+
+.slide5{
+    background-image: url(../img/1-9.jpg);
+    animation: fade5 9s infinite;
+}
+
+.slide6{
+    background-image: url(../img/1-10.jpg);
+    animation: fade6 9s infinite;
+}
+
+.type2.slide1{
+    background-image: url(../img/1-11.jpg);
+}
+
+.type2.slide2{
+    background-image: url(../img/1-12.jpg);
+}
+
+.type2.slide3{
+    background-image: url(../img/1-13.jpg);
+}
+
+.type2.slide4{
+    background-image: url(../img/1-14.jpg);
+}
+
+.type2.slide5{
+    background-image: url(../img/1-15.jpg);
+}
+
+.type2.slide6{
+    background-image: url(../img/1-16.jpg);
+}
+@keyframes fade1
+{
+    0%
+    {
+        opacity: 1;
+    }
+    20%
+    {
+        opacity: 0;
+    }
+    40%
+    {
+        opacity: 0;
+    }
+    80%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 1;
+    }
+}
+
+@keyframes fade2
+{
+    0%
+    {
+        opacity: 0;
+    }
+    20%
+    {
+        opacity: 1;
+    }
+    40%
+    {
+        opacity: 0;
+    }
+    80%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 0;
+    }
+}
+
+@keyframes fade3
+{
+    0%
+    {
+        opacity: 0;
+    }
+    20%
+    {
+        opacity: 0;
+    }
+    40%
+    {
+        opacity: 1;
+    }
+    80%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 0;
+    }
+}
+
+@keyframes fade4
+{
+    0%
+    {
+        opacity: 0;
+    }
+    20%
+    {
+        opacity: 0;
+    }
+    40%
+    {
+        opacity: 0;
+    }
+    80%
+    {
+        opacity: 1;
+    }
+    100%
+    {
+        opacity: 0;
+    }
+}
+
+@keyframes fade5{
+    0%
+    {
+        opacity: 1;
+    }
+    40%
+    {
+        opacity: 0;
+    }
+    100%
+    {
+        opacity: 1;
+    }
+}
+
+@keyframes fade6{
+    0%
+    {
+        opacity: 0;
+    }
+    40%
+    {
+        opacity: 1;
+    }
+    100%
+    {
+        opacity: 0;
+    }
 }
 
 .info_img{
     width: 445px;
     height: 304px;
-    border-radius: 45px;
+    border-radius: 40px;
     padding: 0;
     border: 5px solid var(--primaryRed);
 }
 
-@keyframes slider{
-    0%
-    {
-        visibility: hidden;
-        opacity: 0;
-    }
-    
-    2%
-    {
-        visibility: visible;
-        opacity: 1;
-    }
-    
-    18%
-    {
-        visibility: visible;
-        opacity: 1;
-    }
-    
-    20%,100%
-    {
-        visibility: hidden;
-        opacity: 0;
-    }
-}
+
 
 .picture_note{
     padding-top: 15px;
@@ -181,9 +307,6 @@ div.introduction__title img{
     margin-bottom: 180px;
 }
 
-.different{
-    border-radius:45px 45px 0 45px ;
-}
 
 
     
