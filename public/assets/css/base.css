@@ -1,0 +1,37 @@
+/* reset css */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+}
+
+html,
+button,
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+:root {
+  --primaryRed: #e7242d;
+  --secondaryRed: #fc5f6a;
+  --darkBrown: #3c3229;
+  --grayBrown: #6a5c54;
+  --darkModeBg: #181616;
+  --darkModeRed: #c41d25;
+}
+
+body {
+  background-color: white;
+  color: var(--darkBrown);
+  transition: 0.5s linear;
+}
+
+button {
+  cursor: pointer;
+}
+
+.darkmode {
+  background-color: var(--darkModeBg);
+  color: white;
+}
