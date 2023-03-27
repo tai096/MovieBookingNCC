@@ -1,0 +1,18 @@
+.news__heading {
+
+}
+
+.news__heading_icon {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 340px;
+}
+
+.news__heading_line {
+    margin: 0 12px;
+    width: 30%;
+    height: 2px;
+    background-color: var(--darkBrown);
+}
