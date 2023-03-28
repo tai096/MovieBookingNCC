@@ -55,11 +55,8 @@
 }
 
 .post_item h1 {
-    width: 400px;
-    height: 36px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    margin-top: 8px;
+    margin-bottom: 12px;
 }
 
 .post_item p {
@@ -80,4 +77,24 @@
 .post_item button:hover {
     background-color: white;
     color: var(--primaryRed);
+}
+
+@media (min-width: 1024px) {
+    .post_item h1 {
+        width: 400px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .post_item {
+        margin-bottom: 24px;
+    }
+
+    .post_item h1 {
+        width: 400px;
+        white-space: normal;
+    }
 }
