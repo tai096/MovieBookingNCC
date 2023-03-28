@@ -1,7 +1,7 @@
 .popup {
   display: none;
   position: fixed;
-  z-index: 10;
+  z-index: 20;
   left: 0;
   top: 0;
   width: 100%;
@@ -13,12 +13,16 @@
   display: flex;
   flex-direction: column;
   position: sticky;
-  top: 30%;
+  top: 5%;
+  right: 0;
+  left: 0;
+  bottom: 0;
   margin: auto;
   border-radius: 10px;
   background-color: white;
   padding: 20px;
   width: 50%;
+  overflow: auto;
 }
 
 .popup-content h1 {
@@ -30,6 +34,11 @@
   cursor: pointer;
   font-weight: 600;
   color: var(--secondaryRed);
+  transition: 300ms;
+}
+
+.popup-content p:hover {
+  color: var(--primaryRed);
 }
 
 .close {
@@ -37,9 +46,191 @@
   cursor: pointer;
 }
 
+.loginForm__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.loginForm__form label {
+  font-weight: 600;
+}
+
+.loginForm__form_block {
+  margin-top: 12px;
+  border: #a3a3a3 solid 2px;
+  padding: 5px 0;
+  height: 30px;
+  border-radius: 10px;
+  display: flex;
+  width: 100%;
+}
+
+.loginForm__form_block input {
+  outline: none;
+  width: 100%;
+  padding: 0 4px;
+  padding-right: 10px;
+}
+
+.loginForm__form_block img {
+  padding: 6px;
+  width: 15px;
+}
+
+.loginForm__form_btn {
+  width: 50%;
+  background-color: var(--secondaryRed);
+  padding: 10px;
+  font-weight: 700;
+  color: white;
+  border-radius: 30px;
+  transition: 300ms;
+  margin-bottom: 20px;
+}
+
+.loginForm__form_btn:hover {
+  background-color: var(--primaryRed);
+}
+
+.loginForm__form_btn-google {
+  width: 30%;
+  font-weight: 600;
+  color: white;
+  background-color: var(--secondaryRed);
+  border-radius: 30px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 300ms;
+}
+
+.loginForm__form_btn-google:hover {
+  background-color: var(--primaryRed);
+}
+
+.loginForm__form_btn-facebook {
+  width: 30%;
+  font-weight: 600;
+  color: white;
+  background-color: #368bfa;
+  border-radius: 30px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 300ms;
+}
+
+.loginForm__form_btn-facebook:hover {
+  background-color: #2a75d8;
+}
+
+.loginForm__form_rememberLogin {
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.register__form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.register__form label {
+  font-weight: 600;
+}
+
+.register__form_block {
+  margin-top: 12px;
+  border: #a3a3a3 solid 2px;
+  padding: 5px 0;
+  height: 30px;
+  border-radius: 10px;
+  display: flex;
+  width: 100%;
+}
+
+.register__form_block input {
+  outline: none;
+  width: 100%;
+  padding: 0 4px;
+  padding-right: 10px;
+}
+
+.register__form_block img {
+  padding: 6px;
+  width: 15px;
+}
+
+.register__form_btn {
+  width: 50%;
+  background-color: var(--secondaryRed);
+  padding: 10px;
+  font-weight: 700;
+  color: white;
+  border-radius: 30px;
+  transition: 300ms;
+  margin-bottom: 20px;
+}
+
+.register__form_btn:hover {
+  background-color: var(--primaryRed);
+}
+
+.register__form_btn-google {
+  width: 30%;
+  font-weight: 600;
+  color: white;
+  background-color: var(--secondaryRed);
+  border-radius: 30px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 300ms;
+}
+
+.register__form_btn-google:hover {
+  background-color: var(--primaryRed);
+}
+
+.register__form_btn-facebook {
+  width: 30%;
+  font-weight: 600;
+  color: white;
+  background-color: #368bfa;
+  border-radius: 30px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 300ms;
+}
+
+.register__form_btn-facebook:hover {
+  background-color: #2a75d8;
+}
+
+.register__form_rememberLogin {
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.5);
+}
+
 @media (max-width: 1024px) {
   .popup-content {
     width: 80%;
+  }
+  .loginForm__form_btn {
+    font-size: 14px;
+  }
+
+  .loginForm__form_btn-facebook,
+  .loginForm__form_btn-google {
+    font-size: 14px;
   }
 }
 
@@ -54,21 +245,41 @@
     font-weight: 600;
     color: var(--secondaryRed);
   }
+
+  .loginForm__form_btn-facebook,
+  .loginForm__form_btn-google {
+    width: 40%;
+  }
+
+  .loginForm__form_rememberLogin,
+  .loginForm__form_forgotPass {
+    font-size: 14px;
+  }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 426px) {
   .popup-content {
+    top: 0;
     width: 85%;
     padding: 15px;
   }
   .popup-content h1 {
-    font-size: 21px;
+    font-size: 20px;
   }
 
   .popup-content p {
     font-size: 11px;
-    cursor: pointer;
     font-weight: 600;
     color: var(--secondaryRed);
+  }
+
+  .loginForm__form_btn-facebook,
+  .loginForm__form_btn-google {
+    width: 45%;
+  }
+
+  .loginForm__form_rememberLogin,
+  .loginForm__form_forgotPass {
+    font-size: 11px;
   }
 }

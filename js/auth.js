@@ -62,32 +62,32 @@ loginBtn.addEventListener("click", () => {
   openLoginPopup();
 });
 
-loginSubmit.addEventListener("click", () => {
-  const auth = getAuth();
-  signInWithEmailAndPassword(auth, email.value, password.value)
-    .then((userCredential) => {
-      // Signed in
-      const user = userCredential.user;
+// loginSubmit.addEventListener("click", () => {
+//   const auth = getAuth();
+//   signInWithEmailAndPassword(auth, email.value, password.value)
+//     .then((userCredential) => {
+//       // Signed in
+//       const user = userCredential.user;
 
-      console.log(user);
-      localStorage.setItem("accessToken", user.accessToken);
-      localStorage.setItem("email", user.email);
-      location.reload();
-    })
-    .catch((error) => {
-      const errorCode = error.code;
-      const errorMessage = error.message;
-    });
+//       console.log(user);
+//       localStorage.setItem("accessToken", user.accessToken);
+//       localStorage.setItem("email", user.email);
+//       location.reload();
+//     })
+//     .catch((error) => {
+//       const errorCode = error.code;
+//       const errorMessage = error.message;
+//     });
 
-  email.value = "";
-  password.value = "";
-});
+//   email.value = "";
+//   password.value = "";
+// });
 
 const accessToken = localStorage.getItem("accessToken");
 const userEmail = localStorage.getItem("email");
 
-console.log(accessToken);
-
 if (accessToken) {
   loginNavBtn.innerText = `${userEmail}`;
 }
+
+openRegisterPopup();
