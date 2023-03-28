@@ -42,7 +42,7 @@
 }
 
 .post_item img {
-    width: 400px;
+    width: inherit;
     height: 256px;
     border-radius: 20px;
     object-fit: cover;
@@ -79,6 +79,8 @@
     color: var(--primaryRed);
 }
 
+/* RESPONSIVE */
+/* PC */
 @media (min-width: 1024px) {
     .post_item h1 {
         width: 400px;
@@ -88,7 +90,8 @@
     }
 }
 
-@media (min-width: 768px) and (max-width: 1023px) {
+/* TABLET */
+@media (min-width: 740px) and (max-width: 1023px) {
     .post_item {
         margin-bottom: 24px;
     }
@@ -96,5 +99,25 @@
     .post_item h1 {
         width: 400px;
         white-space: normal;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 740px) {
+    .post_item img {
+        width: 350px;
+        height: 220px;
+    }
+}
+
+/* MOBILE SIZE S */
+@media (max-width: 375px) {
+    .post_item {
+        height: 350px;
+    }
+
+    .post_item img {
+        width: 268px;
+        height: 160px;
     }
 }
