@@ -67,7 +67,7 @@
         </div>
       </nav>
       <!-- login -->
-      <div id="loginForm" class="popup loginForm">
+      <div id="loginForm" class="popup loginForm" style="padding-top: 50px">
         <div class="popup-content">
           <div style="display: flex; justify-content: space-between">
             <div style="width: 24px"></div>
@@ -91,7 +91,7 @@
               <h1 style="position: absolute; translate: -2.5px">ĐĂNG NHẬP</h1>
             </h1>
 
-            <p id="registerBtn">-> Đăng ký thành viên</p>
+            <p id="registerMember">-> Đăng ký thành viên</p>
           </div>
 
           <form action="" class="loginForm__form">
@@ -162,7 +162,9 @@
               </div>
               <p class="loginForm__form_forgotPass">Quên mật khẩu ?</p>
             </div>
-            <button class="loginForm__form_btn">ĐĂNG NHẬP</button>
+            <button id="loginBtn" type="button" class="loginForm__form_btn">
+              ĐĂNG NHẬP
+            </button>
             <div
               style="
                 width: 80%;
@@ -199,7 +201,7 @@
                 margin: 20px 0;
               "
             >
-              <button class="loginForm__form_btn-google">
+              <button id="loginGoogleBtn" class="loginForm__form_btn-google">
                 <img
                   style="margin-right: 10px"
                   src="./assets/svg/Google.svg"
@@ -207,7 +209,10 @@
                 />
                 Google
               </button>
-              <button class="loginForm__form_btn-facebook">
+              <button
+                id="loginFacebookBtn"
+                class="loginForm__form_btn-facebook"
+              >
                 <img
                   style="margin-right: 10px"
                   src="./assets/svg/Facebook.svg"
@@ -237,6 +242,7 @@
               justify-content: space-between;
               align-items: center;
               margin-bottom: 30px;
+              padding: 0 10px;
             "
           >
             <h1 style="color: var(--secondaryRed)">
@@ -244,7 +250,7 @@
               <h1 style="position: absolute; translate: -2.5px">ĐĂNG KÝ</h1>
             </h1>
 
-            <p id="loginBtn">-> Đã có tài khoản?</p>
+            <p id="hadAccBtn">-> Đã có tài khoản?</p>
           </div>
           <form action="" class="register__form">
             <div
@@ -441,7 +447,9 @@
                 </p> -->
               </div>
             </div>
-            <button class="register__form_btn">TẠO TÀI KHOẢN</button>
+            <button id="registerBtn" class="register__form_btn">
+              TẠO TÀI KHOẢN
+            </button>
             <div
               style="
                 width: 80%;

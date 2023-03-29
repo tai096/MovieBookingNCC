@@ -113,6 +113,22 @@ a:hover {
   transition: transform 0.2s linear;
 }
 
+.userName {
+  padding: 5px 0;
+  font-weight: 600;
+  max-width: 130px;
+  color: white;
+  cursor: pointer;
+  transition: 300ms;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.userName:hover {
+  color: var(--primaryRed);
+}
+
 @media (max-width: 1024px) {
   a {
     font-size: 14px;

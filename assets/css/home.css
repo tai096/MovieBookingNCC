@@ -132,11 +132,15 @@
 
 .home__movies_carousel-list {
   width: 100%;
-  overflow: hidden;
+  overflow: auto;
   display: inline-block;
   text-align: center;
   display: flex;
   align-items: center;
+}
+
+.home__movies_carousel-list::-webkit-scrollbar {
+  width: 0;
 }
 
 .home__movies_carousel-list.active {
