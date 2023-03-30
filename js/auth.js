@@ -102,8 +102,8 @@ const handleLogin = () => {
       localStorage.setItem("accessToken", user.accessToken);
       localStorage.setItem("userId", user.uid);
 
-      // alert("Đăng nhập thành công!");
-      // location.reload();
+      alert("Đăng nhập thành công!");
+      location.reload();
     })
     .catch((error) => {
       const errorMessage = error.message;
@@ -185,7 +185,6 @@ h1.className = "userName";
 h1.addEventListener("click", () => {
   if (window.confirm("Bạn có chắc chắn muốn đăng xuất?") === true) {
     handleLogout();
-  } else {
   }
 });
 
@@ -196,6 +195,7 @@ const getUserData = () => {
         if (accessToken) {
           h1.innerText = `Hi, ${snapshot.val().userName}`;
           loginNavBtn.replaceWith(h1);
+          console.log(snapshot.val());
         }
       } else {
         console.log("No data available");

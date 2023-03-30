@@ -17,7 +17,7 @@ a:hover {
 .nav {
   display: flex;
   align-items: center;
-  position: fixed;
+  position: sticky;
   top: 0;
   right: 0;
   left: 0;
@@ -171,7 +171,7 @@ a:hover {
     top: 0;
     bottom: 0;
     flex-direction: column;
-    justify-content: start;
+    justify-content: space-evenly;
     background-color: var(--darkModeBg);
     width: 70%;
     text-align: center;
@@ -196,7 +196,7 @@ a:hover {
   }
 
   a {
-    margin: 50px auto;
+    /* margin: 50px auto; */
   }
 }
 

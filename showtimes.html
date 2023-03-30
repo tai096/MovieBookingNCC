@@ -25,7 +25,7 @@
   <body>
     <div class="app">
       <!-- navBar -->
-      <nav class="nav" style="position: sticky">
+      <nav class="nav">
         <img
           onclick="window.location.href='index.html'"
           src="./assets/img/logo.png"
@@ -41,7 +41,7 @@
           <a href="./price.html">GIÁ VÉ</a>
 
           <div class="nav__right">
-            <a href="#" id="myBtn" onclick="openLoginPopup()">ĐĂNG NHẬP</a>
+            <a id="loginNav">ĐĂNG NHẬP</a>
             <div class="toggle">
               <input
                 type="checkbox"
@@ -65,16 +65,15 @@
           <span class="bar"></span>
         </div>
       </nav>
-
       <!-- login -->
-      <div id="loginForm" class="popup">
+      <div id="loginForm" class="popup loginForm" style="padding-top: 50px">
         <div class="popup-content">
           <div style="display: flex; justify-content: space-between">
             <div style="width: 24px"></div>
             <img
               src="./assets/svg/Close Button.svg"
               class="close"
-              onclick="closeLoginPopup()"
+              id="closeLogin"
             />
           </div>
 
@@ -83,18 +82,151 @@
               display: flex;
               justify-content: space-between;
               align-items: center;
+              margin-bottom: 30px;
             "
           >
             <h1 style="color: var(--secondaryRed)">
               ĐĂNG NHẬP
-              <h1 style="position: absolute; translate: -3px">ĐĂNG NHẬP</h1>
+              <h1 style="position: absolute; translate: -2.5px">ĐĂNG NHẬP</h1>
             </h1>
 
-            <p onclick="openRegisterPopup()">-> Đăng ký thành viên</p>
+            <p id="registerMember">-> Đăng ký thành viên</p>
           </div>
+
+          <form action="" class="loginForm__form">
+            <div
+              style="
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                width: 80%;
+                min-width: 250px;
+              "
+            >
+              <label for="emailLoginInput">Email</label>
+              <div class="loginForm__form_block">
+                <img src="./assets/svg/email.svg" alt="" />
+                <input
+                  required
+                  placeholder="Nhập email của bạn"
+                  type="email"
+                  name="email"
+                  id="emailLoginInput"
+                />
+              </div>
+            </div>
+            <div style="height: 20px"></div>
+            <div
+              style="
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                width: 80%;
+                min-width: 250px;
+              "
+            >
+              <label for="">Mật khẩu</label>
+              <div class="loginForm__form_block">
+                <img src="./assets/svg/password.svg" alt="" />
+                <input
+                  required
+                  placeholder="Nhập mật khẩu của bạn"
+                  type="text"
+                  name="password"
+                  id="passwordLoginInput"
+                  class=""
+                />
+              </div>
+            </div>
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                width: 80%;
+                min-width: 250px;
+                margin: 20px 0;
+              "
+            >
+              <div style="display: flex; align-items: center">
+                <input
+                  type="checkbox"
+                  id="rememberLogin"
+                  name="rememberLogin"
+                  value="rememberLogin"
+                  style="cursor: pointer; margin-right: 5px"
+                />
+                <label class="loginForm__form_rememberLogin" for="rememberLogin"
+                  >Ghi nhớ đăng nhập</label
+                >
+              </div>
+              <p style="font-weight: 500" class="loginForm__form_forgotPass">
+                Quên mật khẩu ?
+              </p>
+            </div>
+            <button id="loginBtn" type="button" class="loginForm__form_btn">
+              ĐĂNG NHẬP
+            </button>
+            <div
+              style="
+                width: 80%;
+                min-width: 250px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+              "
+            >
+              <div
+                class="form__line"
+                style="
+                  height: 1px;
+                  width: 100%;
+                  background-color: rgba(0, 0, 0, 0.5);
+                "
+              ></div>
+              <span style="width: 100%; font-size: 12px; text-align: center"
+                >Hoặc đăng nhập với</span
+              >
+              <div
+                class="form__line"
+                style="
+                  height: 1px;
+                  width: 100%;
+                  background-color: rgba(0, 0, 0, 0.5);
+                "
+              ></div>
+            </div>
+            <div
+              style="
+                display: flex;
+                justify-content: space-around;
+                width: 70%;
+                min-width: 250px;
+                margin: 20px 0;
+              "
+            >
+              <button id="loginGoogleBtn" class="loginForm__form_btn-google">
+                <img
+                  style="margin-right: 10px"
+                  src="./assets/svg/Google.svg"
+                  alt=" Google"
+                />
+                Google
+              </button>
+              <button
+                id="loginFacebookBtn"
+                class="loginForm__form_btn-facebook"
+              >
+                <img
+                  style="margin-right: 10px"
+                  src="./assets/svg/Facebook.svg"
+                  alt=" Google"
+                />
+                Facebook
+              </button>
+            </div>
+          </form>
         </div>
       </div>
-
       <!-- register -->
       <div id="registerForm" class="popup">
         <div class="popup-content">
@@ -103,7 +235,7 @@
             <img
               src="./assets/svg/Close Button.svg"
               class="close"
-              onclick="closeRegisterPopup()"
+              id="closeRegister"
             />
           </div>
 
@@ -112,15 +244,271 @@
               display: flex;
               justify-content: space-between;
               align-items: center;
+              margin-bottom: 30px;
+              padding: 0 10px;
             "
           >
             <h1 style="color: var(--secondaryRed)">
               ĐĂNG KÝ
-              <h1 style="position: absolute; translate: -3px">ĐĂNG KÝ</h1>
+              <h1 style="position: absolute; translate: -2.5px">ĐĂNG KÝ</h1>
             </h1>
 
-            <p onclick="openLoginPopup()">-> Đã có tài khoản?</p>
+            <p id="hadAccBtn">-> Đã có tài khoản?</p>
           </div>
+          <form action="" class="register__form">
+            <div
+              style="
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                width: 100%;
+                min-width: 250px;
+              "
+            >
+              <div
+                style="
+                  display: flex;
+                  flex-direction: column;
+                  align-items: start;
+                  width: 40%;
+                  min-width: 250px;
+                  margin: 8px;
+                "
+              >
+                <label for="nameRegisterInput">Họ tên</label>
+                <div class="register__form_block">
+                  <img src="./assets/svg/person.svg" alt="" />
+                  <input
+                    required
+                    placeholder="Nhập họ tên"
+                    type="text"
+                    name="name"
+                    id="nameRegisterInput"
+                  />
+                </div>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  flex-direction: column;
+                  align-items: start;
+                  width: 45%;
+                  min-width: 250px;
+                  margin: 8px;
+                "
+              >
+                <label for="emailRegisterInput">Email</label>
+                <div class="register__form_block">
+                  <img src="./assets/svg/email.svg" alt="" />
+                  <input
+                    required
+                    placeholder="Nhập email"
+                    type="email"
+                    name="email"
+                    id="emailRegisterInput"
+                  />
+                </div>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  flex-direction: column;
+                  align-items: start;
+                  width: 40%;
+                  min-width: 250px;
+                  margin: 8px;
+                "
+              >
+                <label for="passRegisterInput">Mật khẩu</label>
+                <div class="register__form_block">
+                  <img src="./assets/svg/password.svg" alt="" />
+                  <input
+                    required
+                    placeholder="Nhập mật khẩu"
+                    type="text"
+                    name="password"
+                    id="passRegisterInput"
+                  />
+                </div>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  flex-direction: column;
+                  align-items: start;
+                  width: 45%;
+                  min-width: 250px;
+                  margin: 8px;
+                "
+              >
+                <label for="passConfirmRegisterInput">Xác nhận mật khẩu</label>
+                <div class="register__form_block">
+                  <img src="./assets/svg/password.svg" alt="" />
+                  <input
+                    required
+                    placeholder="Xác nhận mật khẩu"
+                    type="text"
+                    name="password"
+                    id="passConfirmRegisterInput"
+                  />
+                </div>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  flex-direction: column;
+                  align-items: start;
+                  width: 40%;
+                  min-width: 250px;
+                  margin: 8px;
+                "
+              >
+                <label for="dateRegisterInput">Ngày sinh</label>
+                <div class="register__form_block">
+                  <img src="./assets/svg/email.svg" alt="" />
+                  <input
+                    placeholder="Ngày sinh"
+                    type="date"
+                    name="date"
+                    id="dateRegisterInput"
+                  />
+                </div>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  flex-direction: column;
+                  align-items: start;
+                  width: 45%;
+                  min-width: 250px;
+                  margin: 8px;
+                "
+              >
+                <label for="sexRegisterInput">Giới tính</label>
+                <div class="register__form_block">
+                  <img src="./assets/svg/sex.svg" alt="" />
+                  <input
+                    required
+                    placeholder="Giới tính"
+                    type="text"
+                    name="sex"
+                    id="sexRegisterInput"
+                    class=""
+                  />
+                </div>
+              </div>
+              <div
+                style="
+                  display: flex;
+                  flex-direction: column;
+                  align-items: start;
+                  width: 45%;
+                  min-width: 250px;
+                  margin: 8px;
+                "
+              >
+                <label for="phoneRegisterInput">Số điện thoại</label>
+                <div class="register__form_block">
+                  <img src="./assets/svg/phone.svg" alt="" />
+                  <input
+                    required
+                    placeholder="Số điện thoại"
+                    type="tel"
+                    name="phone"
+                    id="phoneRegisterInput"
+                    class=""
+                  />
+                </div>
+              </div>
+            </div>
+            <div
+              style="
+                display: flex;
+                justify-content: space-between;
+                width: 90%;
+                min-width: 250px;
+                margin: 20px 0;
+              "
+            >
+              <div style="display: flex; align-items: center">
+                <input
+                  type="checkbox"
+                  id="commit"
+                  name="commit"
+                  value="commit"
+                  style="cursor: pointer; margin-right: 5px"
+                />
+                <label class="register__form_rememberLogin" for="commit">
+                  Tôi cam kết tuân theo những
+                  <b style="color: var(--secondaryRed)">Chính sách bảo mật</b>
+                  và
+                  <b style="color: var(--secondaryRed)">Điều khoản sử dụng</b>
+                  của Rạp Chiếu phim Quốc gia</label
+                >
+              </div>
+            </div>
+            <button id="registerBtn" class="register__form_btn">
+              TẠO TÀI KHOẢN
+            </button>
+            <div
+              style="
+                width: 80%;
+                min-width: 250px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+              "
+            >
+              <div
+                class="form__line"
+                style="
+                  height: 1px;
+                  width: 100%;
+                  background-color: rgba(0, 0, 0, 0.5);
+                "
+              ></div>
+              <span style="width: 100%; font-size: 12px; text-align: center"
+                >Hoặc đăng nhập với</span
+              >
+              <div
+                class="form__line"
+                style="
+                  height: 1px;
+                  width: 100%;
+                  background-color: rgba(0, 0, 0, 0.5);
+                "
+              ></div>
+            </div>
+            <div
+              style="
+                display: flex;
+                justify-content: space-around;
+                width: 70%;
+                min-width: 250px;
+                margin-top: 20px;
+              "
+            >
+              <button id="registerGoogleBtn" class="register__form_btn-google">
+                <img
+                  style="margin-right: 10px"
+                  src="./assets/svg/Google.svg"
+                  alt=" Google"
+                />
+                Google
+              </button>
+              <button
+                id="registerFacebookBtn"
+                class="register__form_btn-facebook"
+              >
+                <img
+                  style="margin-right: 10px"
+                  src="./assets/svg/Facebook.svg"
+                  alt=" Google"
+                />
+                Facebook
+              </button>
+            </div>
+          </form>
         </div>
       </div>
 
@@ -496,7 +884,7 @@
     <script src="./js/nav.js"></script>
     <script src="./js/theme.js"></script>
     <!-- <script type="module" src="./js/showtimes.js"></script> -->
-    <script src="./js/auth.js"></script>
-    <script src="./services/firebase.js"></script>
+    <script type="module" src="./js/auth.js"></script>
+    <script type="module" src="./services/firebase.js"></script>
   </body>
 </html>
