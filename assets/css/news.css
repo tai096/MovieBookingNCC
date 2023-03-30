@@ -1,0 +1,123 @@
+* {
+    color: var(--darkBrown);
+}
+
+.news__heading {
+    text-align: center;
+    margin-top: 16px;
+}
+
+.news__heading p {
+    font-size: 32px; 
+    font-weight: bold; 
+    letter-spacing: 0.05em;
+}
+
+.news__heading_icon {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 340px;
+}
+
+.news__heading_line {
+    margin: 0 12px;
+    width: 30%;
+    height: 2px;
+    background-color: var(--darkBrown);
+}
+
+.news__newsList {
+    margin: 40px 80px 0 80px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.post_item {
+    width: 400px;
+    height: 420px;
+    text-align: center;
+}
+
+.post_item img {
+    width: inherit;
+    height: 256px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.post_item img:hover,
+.post_item h1,
+.post_item button {
+    cursor: pointer;
+}
+
+.post_item h1 {
+    margin-top: 8px;
+    margin-bottom: 12px;
+}
+
+.post_item p {
+
+}
+
+.post_item button {
+    margin-top: 16px;
+    padding: 8px 26px;
+    background-color: var(--primaryRed);
+    color: white;
+    border: 2px solid var(--primaryRed);
+    border-radius: 30px;
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+}
+
+.post_item button:hover {
+    background-color: white;
+    color: var(--primaryRed);
+}
+
+/* RESPONSIVE */
+/* PC */
+@media (min-width: 1024px) {
+    .post_item h1 {
+        width: 400px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+}
+
+/* TABLET */
+@media (min-width: 740px) and (max-width: 1023px) {
+    .post_item {
+        margin-bottom: 24px;
+    }
+
+    .post_item h1 {
+        width: 400px;
+        white-space: normal;
+    }
+}
+
+/* MOBILE */
+@media (max-width: 740px) {
+    .post_item img {
+        width: 350px;
+        height: 220px;
+    }
+}
+
+/* MOBILE SIZE S */
+@media (max-width: 375px) {
+    .post_item {
+        height: 350px;
+    }
+
+    .post_item img {
+        width: 268px;
+        height: 160px;
+    }
+}
