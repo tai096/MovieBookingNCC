@@ -84,8 +84,8 @@
   text-align: center;
   font-size: 20px;
 }
-/* 1024px - 1336px */
-@media (min-width: 63.9375em) and (max-width: 85.375em){
+
+@media (min-width: 1024px) and (max-width: 1336px){
   .price{
     width: 80%;
   }
@@ -102,8 +102,7 @@
   }
 }
 
-/* tablet in-width: 740px; max-width: 1023px */
-@media (min-width: 46.25em) and (max-width: 63.9375em) {
+@media (min-width: 740px) and (max-width: 1023px) {
   .price{
     width: 85%;
   }
@@ -136,8 +135,7 @@
   }
 }
 
-/* mobile max-width: 740px */
-@media (max-width: 46.1875em){
+@media (max-width: 739px){
   .price{
     width: 100%;
     margin: auto;
