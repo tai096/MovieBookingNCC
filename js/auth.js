@@ -10,6 +10,8 @@ import {
 } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-database.js";
 import { auth, database } from "../services/firebase.js";
 
+let isLoading = false;
+
 const loginForm = document.getElementById("loginForm");
 const registerForm = document.getElementById("registerForm");
 const loginNavBtn = document.getElementById("loginNav");
@@ -83,6 +85,11 @@ hadAccBtn.addEventListener("click", () => {
 });
 
 const handleLogin = () => {
+  isLoading = true;
+  loginBtn.innerText = "LOADING...";
+  loginBtn.style.cursor = "not-allowed";
+  loginBtn.disabled = true;
+
   signInWithEmailAndPassword(
     auth,
     emailLoginInput.value,
@@ -95,17 +102,28 @@ const handleLogin = () => {
       localStorage.setItem("accessToken", user.accessToken);
       localStorage.setItem("userId", user.uid);
 
-      alert("Đăng nhập thành công!");
-      location.reload();
+      // alert("Đăng nhập thành công!");
+      // location.reload();
     })
     .catch((error) => {
       const errorMessage = error.message;
       alert(errorMessage);
-      openRegisterPopup();
+      // openRegisterPopup();
+    })
+    .finally(() => {
+      isLoading = false;
+      loginBtn.innerText = "ĐĂNG NHẬP";
+      loginBtn.disabled = false;
+      loginBtn.style.cursor = "pointer";
     });
 };
 
 const handleSignUp = () => {
+  isLoading = true;
+  registerBtn.innerText = "LOADING...";
+  registerBtn.style.cursor = "not-allowed";
+  registerBtn.disabled = true;
+
   createUserWithEmailAndPassword(
     auth,
     emailRegisterInput.value,
@@ -134,6 +152,12 @@ const handleSignUp = () => {
       const errorMessage = error.message;
       console.log(errorMessage);
       // ..
+    })
+    .finally(() => {
+      isLoading = false;
+      registerBtn.innerText = "TẠO TÀI KHOẢN";
+      registerBtn.disabled = false;
+      registerBtn.style.cursor = "pointer";
     });
 };
 

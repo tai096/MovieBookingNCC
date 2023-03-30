@@ -25,11 +25,12 @@
   padding: 20px;
   width: 50%;
   overflow: auto;
+  box-shadow: 0px 4px 10px 3px rgba(0, 0, 0, 0.25);
 }
 
 .popup-content h1 {
   font-size: 36px;
-  color: #251f1a;
+  /* color: #251f1a; */
 }
 
 .popup-content p {
@@ -56,7 +57,7 @@
 }
 
 .loginForm__form label {
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .loginForm__form_block {
@@ -67,6 +68,7 @@
   border-radius: 10px;
   display: flex;
   width: 100%;
+  background-color: white;
 }
 
 .loginForm__form_block input {
@@ -132,7 +134,6 @@
 
 .loginForm__form_rememberLogin {
   cursor: pointer;
-  color: rgba(0, 0, 0, 0.5);
 }
 
 .register__form {
@@ -143,12 +144,13 @@
 }
 
 .register__form label {
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .register__form_block {
   margin-top: 12px;
   border: #a3a3a3 solid 2px;
+  background-color: white;
   padding: 5px 0;
   height: 30px;
   border-radius: 10px;
@@ -225,7 +227,7 @@
 
 .register__form_rememberLogin {
   cursor: pointer;
-  color: rgba(0, 0, 0, 0.5);
+  font-size: 14px;
 }
 
 @media (max-width: 1024px) {

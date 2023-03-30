@@ -160,7 +160,9 @@
                   >Ghi nhớ đăng nhập</label
                 >
               </div>
-              <p class="loginForm__form_forgotPass">Quên mật khẩu ?</p>
+              <p style="font-weight: 500" class="loginForm__form_forgotPass">
+                Quên mật khẩu ?
+              </p>
             </div>
             <button id="loginBtn" type="button" class="loginForm__form_btn">
               ĐĂNG NHẬP
@@ -175,6 +177,7 @@
               "
             >
               <div
+                class="form__line"
                 style="
                   height: 1px;
                   width: 100%;
@@ -185,6 +188,7 @@
                 >Hoặc đăng nhập với</span
               >
               <div
+                class="form__line"
                 style="
                   height: 1px;
                   width: 100%;
@@ -442,9 +446,6 @@
                   <b style="color: var(--secondaryRed)">Điều khoản sử dụng</b>
                   của Rạp Chiếu phim Quốc gia</label
                 >
-                <!-- <p class="detail">
-                  My Name is: <span class="name">Tintinecute</span>
-                </p> -->
               </div>
             </div>
             <button id="registerBtn" class="register__form_btn">
@@ -460,6 +461,7 @@
               "
             >
               <div
+                class="form__line"
                 style="
                   height: 1px;
                   width: 100%;
@@ -470,6 +472,7 @@
                 >Hoặc đăng nhập với</span
               >
               <div
+                class="form__line"
                 style="
                   height: 1px;
                   width: 100%;
@@ -486,7 +489,7 @@
                 margin-top: 20px;
               "
             >
-              <button class="register__form_btn-google">
+              <button id="registerGoogleBtn" class="register__form_btn-google">
                 <img
                   style="margin-right: 10px"
                   src="./assets/svg/Google.svg"
@@ -494,7 +497,10 @@
                 />
                 Google
               </button>
-              <button class="register__form_btn-facebook">
+              <button
+                id="registerFacebookBtn"
+                class="register__form_btn-facebook"
+              >
                 <img
                   style="margin-right: 10px"
                   src="./assets/svg/Facebook.svg"
