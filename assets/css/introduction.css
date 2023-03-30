@@ -12,11 +12,11 @@ div.introduction__title{
     display: flex;
     justify-content: center;
     margin-bottom: 10px;
+    width: 100%;
 }
 
 div.introduction__title img{
-    width: 542.66px;
-    height: auto;;
+    width: 45%;
 }
 
 .introduction__line{
@@ -290,14 +290,16 @@ div.introduction__title img{
     position: absolute;
     right: 0;
 }
-
+.contain-dash{
+    margin-top: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
 .dashline{
-    position: relative;
-    left: 315px;
-    width: 358px;
+    width: 450px;
     height: 2px;
     border-bottom: 2px dashed var(--darkBrown);
-    margin-top: 40px;
 }
 
 .block.block2{
@@ -320,14 +322,10 @@ div.introduction__title img{
 
 .block.block3{
     margin-top:70px;
-    position: relative;
     margin-bottom: 100px;
 }
 
 @media (min-width: 1174px) and (max-width: 1535px){
-    div.introduction__title img {
-        width: 450px;
-    }
     div.introduction__line #camera{
         width: 10px;
         height: 10px;
@@ -359,15 +357,11 @@ div.introduction__title img{
         font-size: 14px;
     }
     .dashline {
-        left: 291px;
         width: 400px;
-        height: 2px;
-        margin-top: 40px;
     }
     .column1{
         width: 400px;
     }
-
     .block2.special .column1 img {
         width: 310px;
         margin-left: 20px;
@@ -389,9 +383,6 @@ div.introduction__title img{
 }
 
  @media (min-width: 1024px) and (max-width: 1173px){
-    div.introduction__title img {
-        width: 400px;
-    }
     div.introduction__line #camera{
         width: 10px;
         height: 10px;
@@ -423,10 +414,7 @@ div.introduction__title img{
         font-size: 13px;
     }
     .dashline {
-        left: 70%;
         width: 310px;
-        height: 2px;
-        margin-top: 40px;
     }
     .column1{
         width: 350px;
@@ -453,7 +441,7 @@ div.introduction__title img{
 
 @media (min-width: 740px) and (max-width: 1023px){
     div.introduction__title img {
-        width: 400px;
+        width: 60%;
     }
     .introduction__pageTitle_icon img{
         width: 50px;
@@ -482,10 +470,7 @@ div.introduction__title img{
         font-size: 12.5px;
     }
     .dashline {
-        left: 65%;
         width: 290px;
-        height: 2px;
-        margin-top: 30px;
     }
     .column1{
         width: 300px;
@@ -511,13 +496,13 @@ div.introduction__title img{
 
 @media (min-width: 377px) and (max-width: 739px){
     div.introduction__title img {
-        width: 310px;
+        width: 60%;
     }
     div.introduction{
         width: 100%;
     }
     .introduction__pageTitle_icon img{
-        width: 30px;
+        width: 45px;
         height: auto;
     }
     .big_block .block_title {
@@ -574,9 +559,9 @@ div.introduction__title img{
     }
 }
 
-@media (max-width: 376px){
+@media (min-width: 321px) and (max-width: 376px){
     div.introduction__title img {
-        width: 310px;
+        width: 80%;
     }
     div.introduction{
         width: 100%;
@@ -635,7 +620,77 @@ div.introduction__title img{
         margin-bottom: 70px;
     }
     .block3 .column2{
-        width: 375px;
+        width: 320px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 320px){
+    div.introduction__title img {
+        width: 100%;
+    }
+    div.introduction{
+        width: 100%;
+    }
+    .introduction__pageTitle_icon img{
+        width: 30px;
+        height: auto;
+    }
+    .big_block .block_title {
+        font-size: 17px;
+        margin-bottom: 10px;
+    }
+    .slide-wrapper{
+        width: 200px;
+        height: 133.625px;
+        border-radius: 20px;
+    }  
+    .block{
+        position: relative;
+        margin: auto;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .block_para{
+        padding: 0;
+        margin-top: 12px;
+        margin-left: unset;
+        border: none;
+        position: unset;
+        font-style: normal;
+        width: 90%;
+        height: 20%;
+        font-size: 11px;
+    }
+    .column2{
+        position: unset;
+    }
+    .picture_note {
+        padding-top: 5px;
+        margin-bottom: 10px;
+        font-size: 11.5px;
+    }
+    .dashline {
+        display: none;
+    }
+    .block2.special .column1 img {
+        display: none;
+    }
+    .info_img{
+        width: 200px;
+        height: 133.625px;
+        border-radius: 20px;
+    }
+    .block.block3 {
+        margin-top: 10px;
+        margin-bottom: 70px;
+    }
+    .block3 .column2{
+        width: 200px;
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
