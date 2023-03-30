@@ -188,14 +188,16 @@ h1.addEventListener("click", () => {
   }
 });
 
-const getUserData = () => {
-  get(child(dbRef, `users/${userId}`))
+export let userData;
+
+export const getUserData = () => {
+  return get(child(dbRef, `users/${userId}`))
     .then((snapshot) => {
       if (snapshot.exists()) {
         if (accessToken) {
-          h1.innerText = `Hi, ${snapshot.val().userName}`;
+          userData = snapshot.val();
+          h1.innerText = `Hi, ${userData.userName}`;
           loginNavBtn.replaceWith(h1);
-          console.log(snapshot.val());
         }
       } else {
         console.log("No data available");
