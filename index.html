@@ -21,9 +21,43 @@
       rel="stylesheet"
     />
     <title>Rạp chiếu phim quốc gia</title>
+    <style>
+      .loader {
+        position: fixed;
+        z-index: 99;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.541);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .loader > img {
+        width: 100px;
+      }
+
+      .loader.hidden {
+        animation: fadeOut 1s;
+        animation-fill-mode: forwards;
+      }
+
+      @keyframes fadeOut {
+        100% {
+          opacity: 0;
+          visibility: hidden;
+        }
+      }
+    </style>
   </head>
 
   <body>
+    <div class="loader">
+      <img src="./assets/img/loading.gif" alt="Loading..." />
+    </div>
+
     <div class="app">
       <!-- navBar -->
       <nav class="nav">
@@ -549,7 +583,7 @@
               <button style="cursor: auto" class="home__showMore"></button>
               <h1 class="home__news_header-name">TIN TỨC</h1>
               <button
-                style="margin: 0"
+                style="margin: 0; text-align: right"
                 class="home__showMore"
                 onclick="window.location.replace('./news.html')"
               >
@@ -634,6 +668,12 @@
       </footer>
     </div>
 
+    <script>
+      window.addEventListener("load", function () {
+        const loader = document.querySelector(".loader");
+        loader.className += " hidden"; // class "loader hidden"
+      });
+    </script>
     <script src="./js/nav.js"></script>
     <script type="module" src="./js/auth.js"></script>
     <script src="./js/theme.js"></script>

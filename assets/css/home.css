@@ -36,6 +36,7 @@
 }
 
 .home__showMore {
+  text-align: right;
   width: 120px;
   background: none;
   font-weight: 600;
