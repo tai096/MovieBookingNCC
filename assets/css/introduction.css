@@ -629,7 +629,7 @@ div.introduction__title img{
 
 @media (max-width: 320px){
     div.introduction__title img {
-        width: 100%;
+        width: 80%;
     }
     div.introduction{
         width: 100%;
@@ -643,9 +643,8 @@ div.introduction__title img{
         margin-bottom: 10px;
     }
     .slide-wrapper{
-        width: 200px;
-        height: 133.625px;
-        border-radius: 20px;
+        width: 250px;
+        height: 152.71px;
     }  
     .block{
         position: relative;
@@ -657,21 +656,21 @@ div.introduction__title img{
     }
     .block_para{
         padding: 0;
-        margin-top: 12px;
+        margin-top: 10px;
         margin-left: unset;
         border: none;
         position: unset;
         font-style: normal;
         width: 90%;
-        height: 20%;
-        font-size: 11px;
+        height: 40%;
+        font-size: 14px;
     }
     .column2{
         position: unset;
     }
     .picture_note {
         padding-top: 5px;
-        margin-bottom: 10px;
+        margin-bottom: 20px;
         font-size: 11.5px;
     }
     .dashline {
@@ -681,21 +680,23 @@ div.introduction__title img{
         display: none;
     }
     .info_img{
-        width: 200px;
-        height: 133.625px;
-        border-radius: 20px;
+        width: 250px;
+        height: 152.71px;
     }
     .block.block3 {
         margin-top: 10px;
         margin-bottom: 70px;
     }
+    .block3 .column1{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
     .block3 .column2{
-        width: 200px;
+        width: 250px;
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
     }
 }
-    
-
-
