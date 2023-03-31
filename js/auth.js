@@ -1,6 +1,9 @@
 import {
   signInWithEmailAndPassword,
   createUserWithEmailAndPassword,
+  signOut,
+  signInWithPopup,
+  GoogleAuthProvider,
 } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-auth.js";
 import {
   set,
@@ -47,7 +50,7 @@ window.onclick = function (event) {
 };
 
 function openRegisterPopup() {
-  registerForm.style.display = "block";
+  registerForm.style.display = "flex";
   loginForm.style.display = "none";
 }
 
@@ -57,7 +60,7 @@ function closeRegisterPopup() {
 
 function openLoginPopup() {
   registerForm.style.display = "none";
-  loginForm.style.display = "block";
+  loginForm.style.display = "flex";
 }
 
 function closeLoginPopup() {
@@ -162,9 +165,60 @@ const handleSignUp = () => {
 };
 
 const handleLogout = () => {
-  localStorage.clear();
-  location.reload();
+  signOut(auth)
+    .then(() => {
+      localStorage.removeItem("accessToken");
+      localStorage.removeItem("userId");
+      location.reload();
+    })
+    .catch((error) => {
+      console.log(error);
+    });
 };
+
+const provider = new GoogleAuthProvider();
+
+const handleLoginGoogle = () => {
+  isLoading = true;
+  loginGoogleBtn.innerText = "LOADING...";
+  loginGoogleBtn.style.cursor = "not-allowed";
+  loginGoogleBtn.disabled = true;
+
+  signInWithPopup(auth, provider)
+    .then((result) => {
+      const credential = GoogleAuthProvider.credentialFromResult(result);
+      const token = credential.accessToken;
+      const user = result.user;
+
+      set(ref(database, "users/" + user.uid), {
+        id: user.uid,
+        email: user.email,
+        userName: user.displayName,
+        date: user.date ? user.date : "",
+        sex: user.sex ? user.sex : "",
+        phone: user.phoneNumber,
+      });
+
+      localStorage.setItem("accessToken", user.accessToken);
+      localStorage.setItem("userId", user.uid);
+
+      location.reload();
+    })
+    .catch((error) => {
+      const errorMessage = error.message;
+      console.log(errorMessage);
+    })
+    .finally(() => {
+      isLoading = false;
+      loginGoogleBtn.innerText = "TẠO TÀI KHOẢN";
+      loginGoogleBtn.disabled = false;
+      loginGoogleBtn.style.cursor = "pointer";
+    });
+};
+
+loginGoogleBtn.addEventListener("click", (e) => {
+  handleLoginGoogle();
+});
 
 loginBtn.addEventListener("click", (e) => {
   handleLogin();
