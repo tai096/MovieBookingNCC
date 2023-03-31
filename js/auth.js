@@ -41,6 +41,8 @@ const dateRegisterInput = document.getElementById("dateRegisterInput");
 const sexRegisterInput = document.getElementById("sexRegisterInput");
 const phoneRegisterInput = document.getElementById("phoneRegisterInput");
 const registerBtn = document.getElementById("registerBtn");
+const registerGoogleBtn = document.getElementById("registerGoogleBtn");
+const registerFacebookBtn = document.getElementById("registerFacebookBtn");
 
 window.onclick = function (event) {
   if (event.target == loginForm) {
@@ -259,6 +261,10 @@ const handleLoginGoogle = () => {
 };
 
 loginGoogleBtn.addEventListener("click", (e) => {
+  handleLoginGoogle();
+});
+
+registerGoogleBtn.addEventListener("click", (e) => {
   handleLoginGoogle();
 });
 
