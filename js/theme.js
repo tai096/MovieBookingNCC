@@ -12,6 +12,8 @@ const loginGoogleBtn = document.getElementById("loginGoogleBtn");
 const registerGoogleBtn = document.getElementById("registerGoogleBtn");
 const loginFacebookBtn = document.getElementById("loginFacebookBtn");
 const registerFacebookBtn = document.getElementById("registerFacebookBtn");
+const newsHeadingLines = document.querySelectorAll(".news__heading_line");
+const pricePageTitleLines = document.querySelectorAll(".price__pageTitle_line");
 
 const handleDarkMode = () => {
   const setTheme = document.body;
@@ -22,10 +24,18 @@ const handleDarkMode = () => {
   if (setTheme.classList.contains("darkmode")) {
     theme = "darkMode";
     ball.style.transform = "translate(39px)";
-    footer.style.background = "transparent";
+    footer.style.background = "#0000002e";
 
     homeNewsLines.forEach((homeNewsLine) => {
-      homeNewsLine.style.background = "white";
+      homeNewsLine.style.backgroundColor = "white";
+    });
+
+    newsHeadingLines.forEach((newsHeadingLine) => {
+      newsHeadingLine.style.backgroundColor = "white";
+    });
+
+    pricePageTitleLines.forEach((pricePageTitleLine) => {
+      pricePageTitleLine.style.backgroundColor = "white";
     });
 
     controlBtns.forEach((controlBtn) => {
@@ -85,7 +95,15 @@ const handleDarkMode = () => {
     footer.style.background = "var(--darkBrown)";
 
     homeNewsLines.forEach((homeNewsLine) => {
-      homeNewsLine.style.background = "var(--darkBrown)";
+      homeNewsLine.style.backgroundColor = "var(--darkBrown)";
+    });
+
+    newsHeadingLines.forEach((newsHeadingLine) => {
+      newsHeadingLine.style.backgroundColor = "var(--darkBrown)";
+    });
+
+    pricePageTitleLines.forEach((pricePageTitleLine) => {
+      pricePageTitleLine.style.backgroundColor = "var(--darkBrown)";
     });
 
     controlBtns.forEach((controlBtn) => {
@@ -149,10 +167,18 @@ let getTheme = JSON.parse(localStorage.getItem("webTheme"));
 if (getTheme === "darkMode") {
   document.body.classList = "darkmode";
   ball.style.transform = "translate(39px)";
-  footer.style.background = "transparent";
+  footer.style.background = "#0000002e";
 
   homeNewsLines.forEach((homeNewsLine) => {
     homeNewsLine.style.background = "white";
+  });
+
+  newsHeadingLines.forEach((newsHeadingLine) => {
+    newsHeadingLine.style.backgroundColor = "white";
+  });
+
+  pricePageTitleLines.forEach((pricePageTitleLine) => {
+    pricePageTitleLine.style.backgroundColor = "white";
   });
 
   controlBtns.forEach((controlBtn) => {
