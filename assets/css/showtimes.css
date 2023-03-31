@@ -136,10 +136,11 @@
   background-color: white;
   color: var(--darkBrown);
   height: 46px;
-  padding: 12px 25px;
+  padding: 12px 0;
   font-size: 20px;
   border: 2px solid var(--darkBrown);
   border-radius: 5px;
+  width: 100px;
 }
 
 .showtimes__filmSection_timeBtn:hover {
@@ -244,5 +245,9 @@
 @media (max-width: 325px) {
   .showtimes__calendar-gridcontainer {
     grid-template-columns: repeat(7, 85px);
+  }
+
+  .showtimes__filmSection_timeBtn {
+    width: 80px;
   }
 }
