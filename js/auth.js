@@ -12,9 +12,11 @@ import {
   get,
 } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-database.js";
 import { auth, database } from "../services/firebase.js";
+import { showToast } from "./toast.js";
 
 let isLoading = false;
 
+const toast = document.getElementById("toast");
 const loginForm = document.getElementById("loginForm");
 const registerForm = document.getElementById("registerForm");
 const loginNavBtn = document.getElementById("loginNav");
@@ -87,6 +89,39 @@ hadAccBtn.addEventListener("click", () => {
   openLoginPopup();
 });
 
+const validateLoginForm = () => {
+  if (emailLoginInput.value === "" || passwordLoginInput.value === "") {
+    toast.innerText = "Vui lòng nhập đủ thông tin";
+    toast.style.backgroundColor = "red";
+    showToast();
+    return false;
+  } else {
+    return true;
+  }
+};
+
+const validateRegisterForm = () => {
+  if (
+    emailRegisterInput.value === "" ||
+    passRegisterInput.value === "" ||
+    passConfirmRegisterInput.value === "" ||
+    phoneRegisterInput.value === "" ||
+    nameRegisterInput.value === ""
+  ) {
+    toast.innerText = "Vui lòng nhập đủ thông tin";
+    toast.style.backgroundColor = "red";
+    showToast();
+    return false;
+  } else if (passRegisterInput.value !== passConfirmRegisterInput.value) {
+    toast.innerText = "Xác nhận lại mật khẩu";
+    toast.style.backgroundColor = "red";
+    showToast();
+    return false;
+  } else {
+    return true;
+  }
+};
+
 const handleLogin = () => {
   isLoading = true;
   loginBtn.innerText = "LOADING...";
@@ -104,14 +139,16 @@ const handleLogin = () => {
       console.log(user);
       localStorage.setItem("accessToken", user.accessToken);
       localStorage.setItem("userId", user.uid);
-
-      alert("Đăng nhập thành công!");
+      toast.style.backgroundColor = "green";
+      toast.innerText = "Đăng nhập thành công !";
+      showToast();
       location.reload();
     })
     .catch((error) => {
       const errorMessage = error.message;
-      alert(errorMessage);
-      // openRegisterPopup();
+      toast.innerText = errorMessage;
+      toast.style.backgroundColor = "red";
+      showToast();
     })
     .finally(() => {
       isLoading = false;
@@ -148,13 +185,16 @@ const handleSignUp = () => {
       localStorage.setItem("accessToken", user.accessToken);
       localStorage.setItem("userId", user.uid);
 
-      alert("Đăng ký thành công!");
+      toast.style.backgroundColor = "green";
+      toast.innerText = "Đăng ký thành công !";
+      showToast();
       location.reload();
     })
     .catch((error) => {
       const errorMessage = error.message;
-      console.log(errorMessage);
-      // ..
+      toast.innerText = errorMessage;
+      toast.style.backgroundColor = "red";
+      showToast();
     })
     .finally(() => {
       isLoading = false;
@@ -206,7 +246,9 @@ const handleLoginGoogle = () => {
     })
     .catch((error) => {
       const errorMessage = error.message;
-      console.log(errorMessage);
+      toast.innerText = errorMessage;
+      toast.style.backgroundColor = "red";
+      showToast();
     })
     .finally(() => {
       isLoading = false;
@@ -221,11 +263,15 @@ loginGoogleBtn.addEventListener("click", (e) => {
 });
 
 loginBtn.addEventListener("click", (e) => {
-  handleLogin();
+  if (validateLoginForm() == true) {
+    handleLogin();
+  }
 });
 
 registerBtn.addEventListener("click", (e) => {
-  handleSignUp();
+  if (validateRegisterForm() == true) {
+    handleSignUp();
+  }
 });
 
 const accessToken = localStorage.getItem("accessToken");
@@ -251,6 +297,7 @@ export const getUserData = () => {
         if (accessToken) {
           userData = snapshot.val();
           h1.innerText = `Hi, ${userData.userName}`;
+          h1.title = userData.userName;
           loginNavBtn.replaceWith(h1);
         }
       } else {

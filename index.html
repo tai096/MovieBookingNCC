@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./assets/css/nav.css" />
     <link rel="stylesheet" href="./assets/css/login.css" />
     <link rel="stylesheet" href="./assets/css/home.css" />
+    <link rel="stylesheet" href="./assets/css/toast.css" />
     <link rel="stylesheet" href="./assets/css/autoSlide.css" />
     <link rel="stylesheet" href="./assets/css/footer.css" />
     <link
@@ -57,6 +58,8 @@
     <div class="loader">
       <img src="./assets/img/loading.gif" alt="Loading..." />
     </div>
+
+    <div id="toast">Some text some message..</div>
 
     <div class="app">
       <!-- navBar -->
@@ -254,7 +257,7 @@
                 <img
                   style="margin-right: 10px"
                   src="./assets/svg/Facebook.svg"
-                  alt=" Google"
+                  alt=" Facebook"
                 />
                 Facebook
               </button>
@@ -422,14 +425,14 @@
                 <label for="sexRegisterInput">Giới tính</label>
                 <div class="register__form_block">
                   <img src="./assets/svg/sex.svg" alt="" />
-                  <input
-                    required
-                    placeholder="Giới tính"
-                    type="text"
-                    name="sex"
+                  <select
+                    style="width: 90%; background: none; outline: none"
                     id="sexRegisterInput"
-                    class=""
-                  />
+                  >
+                    <option value="Male">Nam</option>
+                    <option value="Female">Nữ</option>
+                    <option value="nothing">Khác</option>
+                  </select>
                 </div>
               </div>
               <div
@@ -523,7 +526,7 @@
                 margin-top: 20px;
               "
             >
-              <button id="registerGoogleBtn" class="register__form_btn-google">
+              <button id="loginGoogleBtn" class="register__form_btn-google">
                 <img
                   style="margin-right: 10px"
                   src="./assets/svg/Google.svg"
@@ -531,10 +534,7 @@
                 />
                 Google
               </button>
-              <button
-                id="registerFacebookBtn"
-                class="register__form_btn-facebook"
-              >
+              <button id="loginFacebookBtn" class="register__form_btn-facebook">
                 <img
                   style="margin-right: 10px"
                   src="./assets/svg/Facebook.svg"
@@ -680,5 +680,6 @@
     <script type="module" src="./js/home.js"></script>
     <script src="./js/autoSlide.js"></script>
     <script type="module" src="./services/firebase.js"></script>
+    <script type="module" src="./js/toast.js"></script>
   </body>
 </html>
