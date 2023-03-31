@@ -44,7 +44,6 @@ function renderMovies(type) {
 renderMovies("nowPlaying");
 
 nowPlayingBtn.addEventListener("click", () => {
-  showToast();
   renderMovies("nowPlaying");
 });
 
