@@ -238,7 +238,7 @@ const handleLoginGoogle = () => {
         userName: user.displayName,
         date: user.date ? user.date : "",
         sex: user.sex ? user.sex : "",
-        phone: user.phoneNumber,
+        phone: user.phoneNumber ? user.phoneNumber : "",
       });
 
       localStorage.setItem("accessToken", user.accessToken);
