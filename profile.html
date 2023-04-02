@@ -556,19 +556,21 @@
       <div class="profile">
         <div class="profile__sideBar">
           <button class="profile__sideBar_btn">THÔNG TIN CHUNG</button>
-          <button class="profile__sideBar_btn">CHI TIẾT TÀI KHOẢN</button>
           <button class="profile__sideBar_btn">THẺ THÀNH VIÊN</button>
           <button class="profile__sideBar_btn">ĐIỂM THƯỞNG</button>
           <button class="profile__sideBar_btn">THẺ QUÀ TẶNG</button>
           <button class="profile__sideBar_btn">VOUCHER</button>
           <button class="profile__sideBar_btn">COUPON</button>
           <button class="profile__sideBar_btn">LỊCH SỬ GIAO DỊCH</button>
+          <button id="profileLogout" class="profile__sideBar_btn">
+            ĐĂNG XUẤT
+          </button>
         </div>
         <div class="profile__information">
           <h1 class="profile__information_title">THÔNG TIN CHUNG</h1>
           <div class="profile__information_user">
             <div class="profile__information_user-avt">
-              <img src="./assets/img/yua mikami.jpg" alt="avt" />
+              <img id="profileAvt" alt="avt" />
               <label
                 for="upload"
                 id="profileUploadBtn"
@@ -584,7 +586,12 @@
               >
                 CHỌN ẢNH
               </label>
-              <input type="file" name="" id="upload" hidden />
+              <input
+                type="file"
+                id="upload"
+                hidden
+                accept=".png, .jpg, .jpeg"
+              />
               <button
                 id="updateAvt"
                 style="
@@ -613,6 +620,7 @@
               >
                 <h1>THÔNG TIN TÀI KHOẢN</h1>
                 <button
+                  id="updateProfileBtn"
                   style="
                     font-weight: 600;
                     color: white;
@@ -625,18 +633,131 @@
                   CẬP NHẬT
                 </button>
               </div>
-              <p id="profileName">- Tên: Nguyễn Văn A</p>
-              <p id="profileEmail">- Email: Nguyễn Văn A</p>
-              <p id="profilePhone">- SĐT: Nguyễn Văn A</p>
-              <p id="profileSex">- Giới tính: Nguyễn Văn A</p>
-              <p id="profileDate">- Ngày sinh: Nguyễn Văn A</p>
+              <form class="register__form">
+                <div style="display: flex; flex-wrap: wrap; width: 100%">
+                  <div
+                    style="
+                      display: flex;
+                      flex-direction: column;
+                      align-items: start;
+                      width: 100%;
+                      margin: 8px;
+                    "
+                  >
+                    <label for="nameProfileInput">Họ tên</label>
+                    <div class="register__form_block">
+                      <img src="./assets/svg/person.svg" alt="" />
+                      <input
+                        placeholder="Nhập họ tên"
+                        type="text"
+                        id="nameProfileInput"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    style="
+                      display: flex;
+                      flex-direction: column;
+                      align-items: start;
+                      width: 100%;
+                      margin: 8px;
+                    "
+                  >
+                    <label for="emailProfileInput">Email</label>
+                    <div class="register__form_block">
+                      <img src="./assets/svg/email.svg" alt="" />
+                      <input
+                        placeholder="Nhập email"
+                        type="email"
+                        id="emailProfileInput"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    style="
+                      display: flex;
+                      flex-direction: column;
+                      align-items: start;
+                      width: 100%;
+                      margin: 8px;
+                    "
+                  >
+                    <label for="dateProfileInput">Ngày sinh</label>
+                    <div class="register__form_block">
+                      <img src="./assets/svg/email.svg" alt="" />
+                      <input
+                        placeholder="Ngày sinh"
+                        type="date"
+                        id="dateProfileInput"
+                      />
+                    </div>
+                  </div>
+                  <div
+                    style="
+                      display: flex;
+                      flex-direction: column;
+                      align-items: start;
+                      width: 100%;
+                      margin: 8px;
+                    "
+                  >
+                    <label for="sexProfileInput">Giới tính</label>
+                    <div class="register__form_block">
+                      <img src="./assets/svg/sex.svg" alt="" />
+                      <select
+                        style="width: 90%; background: none; outline: none"
+                        id="sexProfileInput"
+                      >
+                        <option value="Male">Nam</option>
+                        <option value="Female">Nữ</option>
+                        <option value="nothing">Khác</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div
+                    style="
+                      display: flex;
+                      flex-direction: column;
+                      align-items: start;
+                      width: 100%;
+                      margin: 8px;
+                    "
+                  >
+                    <label for="phoneProfileInput">Số điện thoại</label>
+                    <div class="register__form_block">
+                      <img src="./assets/svg/phone.svg" alt="" />
+                      <input
+                        placeholder="Số điện thoại"
+                        type="tel"
+                        id="phoneProfileInput"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </form>
             </div>
           </div>
+
           <div class="profile__information_spending">
             <img src="./assets/img/spendingGroup.png" alt="" />
             <div style="width: 15px; height: 20px"></div>
             <img src="./assets/img/cardGroup.png" alt="" />
           </div>
+
+          <button
+            id="logoutMobie"
+            style="
+              cursor: pointer;
+              font-weight: 600;
+              color: white;
+              padding: 10px 20px;
+              border-radius: 10px;
+              margin: 40px 0;
+            "
+            class="profile__information_logout"
+          >
+            ĐĂNG XUẤT
+          </button>
         </div>
       </div>
 

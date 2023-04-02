@@ -1,6 +1,7 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-app.js";
 import { getAuth } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-auth.js";
 import { getDatabase } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-database.js";
+import { getStorage } from "https://www.gstatic.com/firebasejs/9.18.0/firebase-storage.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyChNaKL8422Mb3UFwx4ef3O1VFgS-1iwkA",
@@ -18,3 +19,4 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 export const auth = getAuth();
 export const database = getDatabase(app);
+export const storage = getStorage(app);

@@ -206,7 +206,7 @@ const handleSignUp = () => {
     });
 };
 
-const handleLogout = () => {
+export const handleLogout = () => {
   signOut(auth)
     .then(() => {
       localStorage.removeItem("accessToken");
@@ -231,14 +231,15 @@ const handleLoginGoogle = () => {
       const credential = GoogleAuthProvider.credentialFromResult(result);
       const token = credential.accessToken;
       const user = result.user;
-
+      console.log(user);
       set(ref(database, "users/" + user.uid), {
         id: user.uid,
         email: user.email,
         userName: user.displayName,
-        date: user.date ? user.date : "",
-        sex: user.sex ? user.sex : "",
-        phone: user.phoneNumber ? user.phoneNumber : "",
+        date: user.date ? user.date : "Chưa cập nhật",
+        sex: user.sex ? user.sex : "Chưa cập nhật",
+        phone: user.phoneNumber ? user.phoneNumber : "Chưa cập nhật",
+        image: user.photoURL ? user.photoURL : "",
       });
 
       localStorage.setItem("accessToken", user.accessToken);
@@ -289,9 +290,10 @@ const h1 = document.createElement("h1");
 h1.className = "userName";
 
 h1.addEventListener("click", () => {
-  if (window.confirm("Bạn có chắc chắn muốn đăng xuất?") === true) {
-    handleLogout();
-  }
+  // if (window.confirm("Bạn có chắc chắn muốn đăng xuất?") === true) {
+  //   handleLogout();
+  // }
+  window.location.replace("./profile.html");
 });
 
 export let userData;

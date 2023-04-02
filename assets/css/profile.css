@@ -103,14 +103,23 @@
   font-size: 18px;
 }
 
+.profile__information_logout {
+  display: none;
+  background-color: var(--secondaryRed);
+}
+
 @media (max-width: 1000px) {
   .profile__sideBar {
     display: none;
   }
+
   .profile__information {
     width: 90%;
   }
 
+  .profile__information_logout {
+    display: block;
+  }
   /* .profile__information_spending {
     flex-direction: column;
   } */
