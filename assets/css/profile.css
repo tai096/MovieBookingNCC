@@ -14,8 +14,13 @@
   background-color: var(--secondaryRed);
 }
 
+#updateProfileBtn {
+  background-color: var(--secondaryRed);
+}
+
 .profile button:hover,
-.profile__information_user-uploadBtn:hover {
+.profile__information_user-uploadBtn:hover,
+#updateProfileBtn:hover {
   background-color: var(--primaryRed);
 }
 

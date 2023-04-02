@@ -286,13 +286,10 @@ const userId = localStorage.getItem("userId");
 
 const dbRef = ref(database);
 
-const h1 = document.createElement("h1");
-h1.className = "userName";
+const avatar = document.createElement("img");
+avatar.className = "avatar";
 
-h1.addEventListener("click", () => {
-  // if (window.confirm("Bạn có chắc chắn muốn đăng xuất?") === true) {
-  //   handleLogout();
-  // }
+avatar.addEventListener("click", () => {
   window.location.replace("./profile.html");
 });
 
@@ -304,9 +301,11 @@ export const getUserData = () => {
       if (snapshot.exists()) {
         if (accessToken) {
           userData = snapshot.val();
-          h1.innerText = `Hi, ${userData.userName}`;
-          h1.title = userData.userName;
-          loginNavBtn.replaceWith(h1);
+          avatar.src = userData.image
+            ? userData.image
+            : "./assets/img/yua mikami.jpg";
+          avatar.title = userData.userName;
+          loginNavBtn.replaceWith(avatar);
         }
       } else {
         console.log("No data available");

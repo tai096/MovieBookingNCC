@@ -27,6 +27,8 @@ const phoneProfileInput = document.getElementById("phoneProfileInput");
 const sexProfileInput = document.getElementById("sexProfileInput");
 const dateProfileInput = document.getElementById("dateProfileInput");
 
+let isLoading = false;
+
 uploadInput.addEventListener("change", () => {
   if (uploadInput.value) {
     profileUploadBtn.innerText = uploadInput.value;
@@ -41,10 +43,12 @@ uploadInput.addEventListener("change", () => {
 
 getUserData()
   .then(() => {
-    profileAvt.src = userData.image;
-    nameProfileInput.placeholder = userData.userName;
-    emailProfileInput.placeholder = userData.email;
-    phoneProfileInput.placeholder = userData.phone;
+    profileAvt.src = userData.image
+      ? userData.image
+      : "./assets/img/yua mikami.jpg";
+    nameProfileInput.value = userData.userName;
+    emailProfileInput.value = userData.email;
+    phoneProfileInput.value = userData.phone;
     sexProfileInput.value = userData.sex;
     dateProfileInput.value = userData.date;
   })
@@ -65,6 +69,11 @@ logoutMobie.addEventListener("click", () => {
 });
 
 const handleUpload = () => {
+  isLoading = true;
+  updateAvt.innerText = "LOADING...";
+  updateAvt.style.cursor = "not-allowed";
+  updateAvt.disabled = true;
+
   const file = document.getElementById("upload").files[0];
   const storageRef = ref(storage, `images/${file.name}`);
 
@@ -78,18 +87,40 @@ const handleUpload = () => {
       getDownloadURL(storageRef).then((url) => {
         profileAvt.src = url;
       });
+    })
+    .finally(() => {
+      isLoading = false;
+      updateAvt.innerText = "TẢI LÊN";
+      updateAvt.disabled = true;
+      updateAvt.style.backgroundColor = "#c0c0c0";
     });
 };
 
 const handleUpdateProfile = () => {
   const userRef = databaseRef(database, `users/${userData.id}`);
   update(userRef, {
-    image: profileAvt.src,
-  }).then(() => {
-    toast.innerText = "Cập nhật thành công!";
-    toast.style.backgroundColor = "green";
-    showToast();
-  });
+    image: profileAvt.src ? profileAvt.src : userData.image,
+    userName: nameProfileInput.value
+      ? nameProfileInput.value
+      : userData.userName,
+    email: emailProfileInput.value ? emailProfileInput.value : userData.email,
+    date: dateProfileInput.value ? dateProfileInput.value : userData.date,
+    sex: sexProfileInput.value ? sexProfileInput.value : userData.sex,
+    phone: phoneProfileInput.value ? phoneProfileInput.value : userData.phone,
+  })
+    .then(() => {
+      toast.innerText = "Cập nhật thành công!";
+      toast.style.backgroundColor = "green";
+      showToast();
+      setTimeout(() => {
+        window.location.reload();
+      }, 800);
+    })
+    .catch(() => {
+      toast.innerText = "Cập nhật thất bại!";
+      toast.style.backgroundColor = "red";
+      showToast();
+    });
 };
 
 updateProfileBtn.addEventListener("click", () => {
