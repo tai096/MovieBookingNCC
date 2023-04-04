@@ -17,6 +17,12 @@ const pricePageTitleLines = document.querySelectorAll(".price__pageTitle_line");
 const showtimesPageTitleLines = document.querySelectorAll(".showtimes__pageTitle_line");
 const showtimesCalendarItems = document.querySelectorAll(".showtimes__calendar_grid-item");
 const divOfShowtimesCalendarItems = document.querySelectorAll(".showtimes__calendar-gridcontainer > div");
+const clockIcons = document.querySelectorAll(".clockIcon");
+const actorIcons = document.querySelectorAll(".actorIcon");
+const directorIcons = document.querySelectorAll(".directorIcon");
+const flagIcons = document.querySelectorAll(".flagIcon");
+const publishIcons = document.querySelectorAll(".publishIcon");
+const dangerIcons = document.querySelectorAll(".dangerIcon");
 
 const handleDarkMode = () => {
   const setTheme = document.body;
@@ -114,6 +120,30 @@ const handleDarkMode = () => {
     divOfShowtimesCalendarItems.forEach((divOfShowtimesCalendarItem) => {
       divOfShowtimesCalendarItem.style.backgroundColor = "transparent";
     });
+
+    clockIcons.forEach((clockIcon) => {
+      clockIcon.src = "./assets/svg/clock_icon_white.svg";
+    });
+
+    actorIcons.forEach((actorIcon) => {
+      actorIcon.src = "./assets/svg/actor_icon_white.svg";
+    });
+
+    directorIcons.forEach((directorIcon) => {
+      directorIcon.src = "./assets/svg/director_icon_white.svg";
+    });
+    
+    flagIcons.forEach((flagIcon) => {
+      flagIcon.src = "./assets/svg/flag_icon_white.svg";
+    });
+
+    publishIcons.forEach((publishIcon) => {
+      publishIcon.src = "./assets/svg/publish_icon_white.svg";
+    });
+
+    dangerIcons.forEach((dangerIcon) => {
+      dangerIcon.src = "./assets/svg/danger_icon_white.svg";
+    });
   } else {
     theme = "lightMode";
     ball.style.transform = "translate(0px)";
@@ -200,6 +230,30 @@ const handleDarkMode = () => {
 
     registerFacebookBtn.style.backgroundColor = "#368bfa";
     registerFacebookBtn.style.color = "white";
+
+    clockIcons.forEach((clockIcon) => {
+      clockIcon.src = "./assets/svg/Three o Clock clock.svg";
+    });
+
+    actorIcons.forEach((actorIcon) => {
+      actorIcon.src = "./assets/svg/actors.svg";
+    });
+
+    directorIcons.forEach((directorIcon) => {
+      directorIcon.src = "./assets/svg/film_director.svg";
+    });
+    
+    flagIcons.forEach((flagIcon) => {
+      flagIcon.src = "./assets/svg/Flag.svg";
+    });
+
+    publishIcons.forEach((publishIcon) => {
+      publishIcon.src = "./assets/svg/camera_publish.svg";
+    });
+
+    dangerIcons.forEach((dangerIcon) => {
+      dangerIcon.src = "./assets/svg/danger.svg";
+    });
   }
 
   localStorage.setItem("webTheme", JSON.stringify(theme));
@@ -295,5 +349,29 @@ if (getTheme === "darkMode") {
 
   divOfShowtimesCalendarItems.forEach((divOfShowtimesCalendarItem) => {
     divOfShowtimesCalendarItem.style.backgroundColor = "transparent";
+  });
+
+  clockIcons.forEach((clockIcon) => {
+    clockIcon.src = "./assets/svg/clock_icon_white.svg";
+  });
+
+  actorIcons.forEach((actorIcon) => {
+    actorIcon.src = "./assets/svg/actor_icon_white.svg";
+  });
+
+  directorIcons.forEach((directorIcon) => {
+    directorIcon.src = "./assets/svg/director_icon_white.svg";
+  });
+  
+  flagIcons.forEach((flagIcon) => {
+    flagIcon.src = "./assets/svg/flag_icon_white.svg";
+  });
+
+  publishIcons.forEach((publishIcon) => {
+    publishIcon.src = "./assets/svg/publish_icon_white.svg";
+  });
+
+  dangerIcons.forEach((dangerIcon) => {
+    dangerIcon.src = "./assets/svg/danger_icon_white.svg";
   });
 }
