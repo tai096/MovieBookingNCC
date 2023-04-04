@@ -22,6 +22,14 @@ const dashLines = document.querySelectorAll(".dashline");
 const titleImg = document.getElementById("titleImg");
 const pageTitle_icon = document.getElementById("pageTitle_icon");
 const toggleMobile = document.getElementById("toggleMobile");
+const profileInformationHeader = document.getElementById(
+  "profileInformationHeader"
+);
+const profileSpending = document.getElementById("profileSpending");
+const profileSpendingImg = document.getElementById("profileSpendingImg");
+const profileSpendingCardImg = document.getElementById(
+  "profileSpendingCardImg"
+);
 
 const handleDarkMode = () => {
   const setTheme = document.body;
@@ -34,9 +42,19 @@ const handleDarkMode = () => {
     ball.style.transform = "translate(39px)";
     footer.style.background = "#0000002e";
 
+    if (profileInformationHeader) {
+      profileInformationHeader.style.borderBottomColor = "white";
+      profileSpending.style.borderColor = "white";
+    }
+
     if (titleImg) {
       titleImg.src = "./assets/img/myheaderdark.png";
       pageTitle_icon.src = "./assets/svg/cameradark.svg";
+    }
+
+    if (profileSpendingImg) {
+      profileSpendingImg.src = "./assets/img/spendingGroupDark.png";
+      profileSpendingCardImg.src = "./assets/img/cardGroupDark.png";
     }
 
     homeNewsLines.forEach((homeNewsLine) => {
@@ -124,6 +142,16 @@ const handleDarkMode = () => {
     if (titleImg) {
       titleImg.src = "./assets/img/myheader.png";
       pageTitle_icon.src = "./assets/svg/camera.svg";
+    }
+
+    if (profileInformationHeader) {
+      profileInformationHeader.style.borderBottomColor = "var(--darkBrown)";
+      profileSpending.style.borderColor = "var(--darkBrown)";
+    }
+
+    if (profileSpendingImg) {
+      profileSpendingImg.src = "./assets/img/spendingGroup.png";
+      profileSpendingCardImg.src = "./assets/img/cardGroup.png";
     }
 
     homeNewsLines.forEach((homeNewsLine) => {
@@ -295,5 +323,15 @@ if (getTheme === "darkMode") {
     pageTitle_icon.src = "./assets/svg/cameradark.svg";
   }
 
+  if (profileInformationHeader) {
+    profileInformationHeader.style.borderBottomColor = "white";
+    profileSpending.style.borderColor = "white";
+  }
+
   toggleMobile.className = "fas fa-sun fa-sun_mobile";
+
+  if (profileSpendingImg) {
+    profileSpendingImg.src = "./assets/img/spendingGroupDark.png";
+    profileSpendingCardImg.src = "./assets/img/cardGroupDark.png";
+  }
 }

@@ -648,12 +648,13 @@
             <div style="width: 50px"></div>
             <div class="profile__information_user-profile">
               <div
+                id="profileInformationHeader"
                 style="
                   display: flex;
                   justify-content: space-between;
                   align-items: center;
-                  padding: 10px 0;
-                  border-bottom: 2px solid #c0c0c0;
+                  padding: 20px 0;
+                  border-bottom: 1.5px solid var(--darkBrown);
                   margin-bottom: 15px;
                 "
               >
@@ -775,10 +776,18 @@
             </div>
           </div>
 
-          <div class="profile__information_spending">
-            <img src="./assets/img/spendingGroup.png" alt="" />
+          <div id="profileSpending" class="profile__information_spending">
+            <img
+              id="profileSpendingImg"
+              src="./assets/img/spendingGroup.png"
+              alt=""
+            />
             <div style="width: 15px; height: 20px"></div>
-            <img src="./assets/img/cardGroup.png" alt="" />
+            <img
+              id="profileSpendingCardImg"
+              src="./assets/img/cardGroup.png"
+              alt=""
+            />
           </div>
 
           <button
