@@ -20,6 +20,7 @@ const toast = document.getElementById("toast");
 const loginForm = document.getElementById("loginForm");
 const registerForm = document.getElementById("registerForm");
 const loginNavBtn = document.getElementById("loginNav");
+const navMobieAuth = document.getElementById("navMobieAuth");
 const closeLoginBtn = document.getElementById("closeLogin");
 const registerMember = document.getElementById("registerMember");
 const hadAccBtn = document.getElementById("hadAccBtn");
@@ -72,6 +73,10 @@ function closeLoginPopup() {
 }
 
 loginNavBtn.addEventListener("click", () => {
+  openLoginPopup();
+});
+
+navMobieAuth.addEventListener("click", () => {
   openLoginPopup();
 });
 
@@ -286,11 +291,26 @@ const userId = localStorage.getItem("userId");
 
 const dbRef = ref(database);
 
+const navRightUserInfor = document.getElementById("navRightUserInfor");
+const navMobieUserName = document.getElementById("navMobieUserName");
+const navMobieAvatar = document.getElementById("navMobieAvatar");
+
 const avatar = document.createElement("img");
 avatar.className = "avatar";
 
-avatar.addEventListener("click", () => {
+const h1 = document.createElement("h1");
+h1.className = "userName";
+
+const navMobieLogout = document.createElement("button");
+navMobieLogout.className = "navMobieLogout";
+navMobieLogout.innerText = "ĐĂNG XUẤT";
+
+navRightUserInfor.addEventListener("click", () => {
   window.location.replace("./profile.html");
+});
+
+navMobieLogout.addEventListener("click", () => {
+  handleLogout();
 });
 
 export let userData;
@@ -304,8 +324,17 @@ export const getUserData = () => {
           avatar.src = userData.image
             ? userData.image
             : "./assets/img/yua mikami.jpg";
-          avatar.title = userData.userName;
+
+          navMobieAvatar.src = userData.image;
+
+          h1.innerText = userData.userName;
+          navMobieUserName.innerText = userData.userName;
           loginNavBtn.replaceWith(avatar);
+          navMobieAuth.replaceWith(navMobieLogout);
+
+          navRightUserInfor.title = userData.userName;
+          navRightUserInfor.append(avatar);
+          navRightUserInfor.append(h1);
         }
       } else {
         console.log("No data available");

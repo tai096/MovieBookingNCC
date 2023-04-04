@@ -80,6 +80,10 @@
           <a id="navPrice" href="./price.html">GIÁ VÉ</a>
 
           <div class="nav__right">
+            <div
+              id="navRightUserInfor"
+              style="display: flex; align-items: center; cursor: pointer"
+            ></div>
             <a id="loginNav">ĐĂNG NHẬP</a>
             <div class="toggle">
               <input
@@ -97,33 +101,37 @@
             </div>
           </div>
         </div>
-
         <div class="nav__mobie">
+          <div
+            style="display: flex; flex-direction: column; align-items: center"
+          >
+            <img
+              id="navMobieAvatar"
+              src="./assets/img/yua mikami.jpg"
+              alt="avt"
+            />
+            <a
+              id="navMobieUserName"
+              style="
+                margin-top: 15px;
+                font-size: 18px;
+                max-width: 200px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+              "
+            >
+              Thành viên
+            </a>
+          </div>
+
           <a href="./index.html">TRANG CHỦ</a>
           <a href="./introduction.html">GIỚI THIỆU</a>
           <a href="./showtimes.html">LỊCH CHIẾU</a>
           <a href="./news.html">TIN TỨC VÀ ƯU ĐÃI</a>
           <a href="./price.html">GIÁ VÉ</a>
-
-          <div class="nav__right">
-            <a id="loginNav">ĐĂNG NHẬP</a>
-            <div class="toggle">
-              <input
-                type="checkbox"
-                hidden
-                class="checkbox"
-                id="checkbox"
-                onclick="handleDarkMode()"
-              />
-              <label for="checkbox" class="label">
-                <i class="fas fa-moon"></i>
-                <i class="fas fa-sun"></i>
-                <div class="ball" id="ball"></div>
-              </label>
-            </div>
-          </div>
+          <button id="navMobieAuth">ĐĂNG NHẬP</button>
         </div>
-
         <div class="hamburger">
           <span class="bar"></span>
           <span class="bar"></span>

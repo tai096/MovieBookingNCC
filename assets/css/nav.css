@@ -42,12 +42,23 @@ a:hover {
 
 .nav__right {
   border-left: 2px solid white;
-  width: 240px;
+  width: 280px;
   height: 50px;
-  padding-left: 50px;
+  /* padding-left: 50px; */
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.userName {
+  margin-left: 10px;
+  color: #fff;
+  font-weight: 600;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 80px;
+  text-align: center;
 }
 
 .nav__mobie {
@@ -68,7 +79,8 @@ a:hover {
   object-fit: cover;
 }
 
-#navMobieLogout {
+#navMobieAuth,
+.navMobieLogout {
   font-weight: 600;
   background-color: var(--secondaryRed);
   color: #fff;
@@ -76,7 +88,8 @@ a:hover {
   border-radius: 20px;
 }
 
-#navMobieLogout:hover {
+#navMobieAuth:hover,
+.navMobieLogout:hover {
   background-color: var(--primaryRed);
 }
 
@@ -144,11 +157,21 @@ a:hover {
 }
 
 .avatar {
+  margin-left: 40px;
   border-radius: 100%;
   width: 50px;
   height: 50px;
   object-fit: cover;
   cursor: pointer;
+}
+
+.nav__mobie div {
+  width: 85%;
+  border-bottom: 1px solid white;
+}
+
+#navMobieUserName {
+  margin-bottom: 15px;
 }
 
 @media (max-width: 1024px) {
@@ -159,8 +182,16 @@ a:hover {
     padding: 15px 30px;
   }
   .nav__right {
-    width: 200px;
+    width: 240px;
     padding-left: 30px;
+  }
+  .userName {
+    font-size: 14px;
+  }
+  .avatar {
+    width: 40px;
+    height: 40px;
+    margin-left: 0px;
   }
 }
 
@@ -187,6 +218,7 @@ a:hover {
     backdrop-filter: none;
     justify-content: space-between;
   }
+
   .nav__menu {
     display: none;
   }
@@ -199,11 +231,12 @@ a:hover {
     bottom: 0;
     backdrop-filter: blur(10px);
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
     background-color: rgba(0, 0, 0, 0.829);
     width: 70%;
     /* text-align: center; */
+    padding: 40px 0;
     transition: 0.8s;
     opacity: 0;
   }
