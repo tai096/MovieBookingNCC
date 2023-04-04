@@ -102,7 +102,8 @@ const handleDarkMode = () => {
     });
 
     popUps.forEach((popUp) => {
-      popUp.style.backgroundColor = "var(--darkBrown)";
+      popUp.style.backgroundColor = "#88888842";
+      popUp.style.backdropFilter = "blur(30px)";
     });
 
     loginFormBlocks.forEach((loginFormBlock) => {
@@ -199,7 +200,7 @@ const handleDarkMode = () => {
     });
 
     popUps.forEach((popUp) => {
-      popUp.style.backgroundColor = "white";
+      popUp.style.backgroundColor = "rgba(255, 255, 255, 0.8)";
     });
 
     loginFormBlocks.forEach((loginFormBlock) => {
@@ -287,7 +288,8 @@ if (getTheme === "darkMode") {
   });
 
   popUps.forEach((popUp) => {
-    popUp.style.backgroundColor = "var(--darkBrown)";
+    popUp.style.backgroundColor = "#88888842";
+    popUp.style.backdropFilter = "blur(30px)";
   });
 
   loginFormBlocks.forEach((loginFormBlock) => {

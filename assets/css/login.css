@@ -10,7 +10,7 @@
   padding: 20px 0;
   overflow: auto;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.637);
+  background-color: rgba(0, 0, 0, 0.274);
 }
 
 .popup::-webkit-scrollbar {
@@ -22,8 +22,8 @@
   flex-direction: column;
   margin: auto;
   border-radius: 10px;
-  background-color: rgb(255, 255, 255);
-  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.712);
+  backdrop-filter: blur(30px);
   padding: 40px;
   width: 50%;
   overflow: auto;
