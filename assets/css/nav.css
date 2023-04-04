@@ -142,6 +142,31 @@ a:hover {
   font-size: 20px;
 }
 
+.fa-sun_mobile:before {
+  display: none;
+  width: 25px;
+  color: white;
+  font-size: 25px;
+  text-align: center;
+  padding: 2px;
+  border-radius: 15px;
+}
+
+.fa-moon_mobile:before {
+  display: none;
+  width: 25px;
+  color: white;
+  text-align: center;
+  font-size: 25px;
+  padding: 2px;
+  border-radius: 15px;
+}
+
+.fa-sun_mobile:active,
+.fa-moon_mobile:active {
+  background-color: rgba(99, 99, 99, 0.438);
+}
+
 .fa-sun {
   color: white;
   font-size: 20px;
@@ -247,6 +272,11 @@ a:hover {
   }
 
   .nav__menu-login {
+    display: block;
+  }
+
+  .fa-sun_mobile:before,
+  .fa-moon_mobile:before {
     display: block;
   }
 }

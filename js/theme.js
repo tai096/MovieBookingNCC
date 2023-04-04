@@ -14,11 +14,14 @@ const loginFacebookBtn = document.getElementById("loginFacebookBtn");
 const registerFacebookBtn = document.getElementById("registerFacebookBtn");
 const newsHeadingLines = document.querySelectorAll(".news__heading_line");
 const pricePageTitleLines = document.querySelectorAll(".price__pageTitle_line");
-const introductionPageTitleLines = document.querySelectorAll(".introduction__pageTitle_line");
+const introductionPageTitleLines = document.querySelectorAll(
+  ".introduction__pageTitle_line"
+);
 const blockParas = document.querySelectorAll(".block_para");
 const dashLines = document.querySelectorAll(".dashline");
-const title_img = document.getElementById("title_img");
+const titleImg = document.getElementById("titleImg");
 const pageTitle_icon = document.getElementById("pageTitle_icon");
+const toggleMobile = document.getElementById("toggleMobile");
 
 const handleDarkMode = () => {
   const setTheme = document.body;
@@ -31,9 +34,10 @@ const handleDarkMode = () => {
     ball.style.transform = "translate(39px)";
     footer.style.background = "#0000002e";
 
-    title_img.src = "./assets/img/myheaderdark.png";
-    pageTitle_icon.src = "./assets/svg/cameradark.svg"
-
+    if (titleImg) {
+      titleImg.src = "./assets/img/myheaderdark.png";
+      pageTitle_icon.src = "./assets/svg/cameradark.svg";
+    }
 
     homeNewsLines.forEach((homeNewsLine) => {
       homeNewsLine.style.backgroundColor = "white";
@@ -110,12 +114,17 @@ const handleDarkMode = () => {
 
     registerFacebookBtn.style.backgroundColor = "white";
     registerFacebookBtn.style.color = "black";
+
+    toggleMobile.className = "fas fa-sun fa-sun_mobile";
   } else {
     theme = "lightMode";
     ball.style.transform = "translate(0px)";
     footer.style.background = "var(--darkBrown)";
-    title_img.src ="./assets/img/myheader.png";
-    pageTitle_icon.src = "./assets/svg/camera.svg"
+
+    if (titleImg) {
+      titleImg.src = "./assets/img/myheader.png";
+      pageTitle_icon.src = "./assets/svg/camera.svg";
+    }
 
     homeNewsLines.forEach((homeNewsLine) => {
       homeNewsLine.style.backgroundColor = "var(--darkBrown)";
@@ -192,6 +201,8 @@ const handleDarkMode = () => {
 
     registerFacebookBtn.style.backgroundColor = "#368bfa";
     registerFacebookBtn.style.color = "white";
+
+    toggleMobile.className = "fas fa-moon fa-moon_mobile";
   }
 
   localStorage.setItem("webTheme", JSON.stringify(theme));
@@ -279,6 +290,10 @@ if (getTheme === "darkMode") {
   registerFacebookBtn.style.backgroundColor = "white";
   registerFacebookBtn.style.color = "black";
 
-  title_img.src = "./assets/img/myheaderdark.png";
-  pageTitle_icon.src = "./assets/svg/cameradark.svg"
+  if (titleImg) {
+    titleImg.src = "./assets/img/myheaderdark.png";
+    pageTitle_icon.src = "./assets/svg/cameradark.svg";
+  }
+
+  toggleMobile.className = "fas fa-sun fa-sun_mobile";
 }
