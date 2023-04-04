@@ -11,7 +11,7 @@ div.introduction__title {
 }
 
 div.introduction__title img {
-  width: 45%;
+  width: 515px;
 }
 
 .introduction__line {
@@ -61,6 +61,7 @@ div.introduction__title img {
   overflow: hidden;
   position: relative;
   border-radius: 40px;
+  box-sizing: border-box;
   border: 5px solid var(--primaryRed);
 }
 
@@ -233,6 +234,7 @@ div.introduction__title img {
   height: 304px;
   border-radius: 40px;
   padding: 0;
+  box-sizing: border-box;
   border: 5px solid var(--primaryRed);
 }
 
