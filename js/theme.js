@@ -120,6 +120,7 @@ const handleDarkMode = () => {
 
     divOfShowtimesCalendarItems.forEach((divOfShowtimesCalendarItem) => {
       divOfShowtimesCalendarItem.style.backgroundColor = "transparent";
+      divOfShowtimesCalendarItem.style.borderColor = "white";
     });
 
     clockIcons.forEach((clockIcon) => {
@@ -247,6 +248,11 @@ const handleDarkMode = () => {
 
     registerFacebookBtn.style.backgroundColor = "#368bfa";
     registerFacebookBtn.style.color = "white";
+
+    divOfShowtimesCalendarItems.forEach((divOfShowtimesCalendarItem) => {
+      divOfShowtimesCalendarItem.style.backgroundColor = "transparent";
+      divOfShowtimesCalendarItem.style.borderColor = "var(--darkBrown)";
+    });
 
     clockIcons.forEach((clockIcon) => {
       clockIcon.src = "./assets/svg/Three o Clock clock.svg";
@@ -382,6 +388,7 @@ if (getTheme === "darkMode") {
 
   divOfShowtimesCalendarItems.forEach((divOfShowtimesCalendarItem) => {
     divOfShowtimesCalendarItem.style.backgroundColor = "transparent";
+    divOfShowtimesCalendarItem.style.borderColor = "white";
   });
 
   clockIcons.forEach((clockIcon) => {
