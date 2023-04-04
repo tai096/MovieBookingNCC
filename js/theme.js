@@ -23,6 +23,7 @@ const directorIcons = document.querySelectorAll(".directorIcon");
 const flagIcons = document.querySelectorAll(".flagIcon");
 const publishIcons = document.querySelectorAll(".publishIcon");
 const dangerIcons = document.querySelectorAll(".dangerIcon");
+const showtimesTimeSelectBtns = document.querySelectorAll(".showtimes__filmSection_timeBtn");
 
 const handleDarkMode = () => {
   const setTheme = document.body;
@@ -144,6 +145,22 @@ const handleDarkMode = () => {
     dangerIcons.forEach((dangerIcon) => {
       dangerIcon.src = "./assets/svg/danger_icon_white.svg";
     });
+
+    showtimesTimeSelectBtns.forEach((showtimesTimeSelectBtn) => {
+      showtimesTimeSelectBtn.style.borderColor = "white";
+      showtimesTimeSelectBtn.style.color = "white";
+      showtimesTimeSelectBtn.style.backgroundColor = "transparent";
+      
+      showtimesTimeSelectBtn.onmousemove = function() {
+        showtimesTimeSelectBtn.style.borderColor = "var(--secondaryRed)";
+        showtimesTimeSelectBtn.style.color = "var(--secondaryRed)";
+      };
+
+      showtimesTimeSelectBtn.onmouseleave = function() {
+        showtimesTimeSelectBtn.style.borderColor = "white";
+        showtimesTimeSelectBtn.style.color = "white";
+      };
+    });
   } else {
     theme = "lightMode";
     ball.style.transform = "translate(0px)";
@@ -253,6 +270,22 @@ const handleDarkMode = () => {
 
     dangerIcons.forEach((dangerIcon) => {
       dangerIcon.src = "./assets/svg/danger.svg";
+    });
+
+    showtimesTimeSelectBtns.forEach((showtimesTimeSelectBtn) => {
+      showtimesTimeSelectBtn.style.borderColor = "var(--darkBrown)";
+      showtimesTimeSelectBtn.style.color = "var(--darkBrown)";
+      showtimesTimeSelectBtn.style.backgroundColor = "transparent";
+      
+      showtimesTimeSelectBtn.onmousemove = function() {
+        showtimesTimeSelectBtn.style.borderColor = "var(--primaryRed)";
+        showtimesTimeSelectBtn.style.color = "var(--primaryRed)";
+      };
+
+      showtimesTimeSelectBtn.onmouseleave = function() {
+        showtimesTimeSelectBtn.style.borderColor = "var(--darkBrown)";
+        showtimesTimeSelectBtn.style.color = "var(--darkBrown)";
+      };
     });
   }
 
@@ -373,5 +406,21 @@ if (getTheme === "darkMode") {
 
   dangerIcons.forEach((dangerIcon) => {
     dangerIcon.src = "./assets/svg/danger_icon_white.svg";
+  });
+
+  showtimesTimeSelectBtns.forEach((showtimesTimeSelectBtn) => {
+    showtimesTimeSelectBtn.style.borderColor = "white";
+    showtimesTimeSelectBtn.style.color = "white";
+    showtimesTimeSelectBtn.style.backgroundColor = "transparent";
+    
+    showtimesTimeSelectBtn.onmousemove = function() {
+      showtimesTimeSelectBtn.style.borderColor = "var(--secondaryRed)";
+      showtimesTimeSelectBtn.style.color = "var(--secondaryRed)";
+    };
+
+    showtimesTimeSelectBtn.onmouseleave = function() {
+      showtimesTimeSelectBtn.style.borderColor = "white";
+      showtimesTimeSelectBtn.style.color = "white";
+    };
   });
 }
