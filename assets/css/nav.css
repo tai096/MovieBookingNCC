@@ -22,7 +22,7 @@ a:hover {
   backdrop-filter: blur(5px);
   background-image: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0.858),
+    rgba(0, 0, 0, 0.7),
     rgba(0, 0, 0, 0)
   );
   padding: 15px 45px;
