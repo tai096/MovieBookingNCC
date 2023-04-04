@@ -9,7 +9,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 340px;
+  width: 340px;
 }
 
 .showtimes__pageTitle_line {

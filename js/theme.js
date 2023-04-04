@@ -14,6 +14,9 @@ const loginFacebookBtn = document.getElementById("loginFacebookBtn");
 const registerFacebookBtn = document.getElementById("registerFacebookBtn");
 const newsHeadingLines = document.querySelectorAll(".news__heading_line");
 const pricePageTitleLines = document.querySelectorAll(".price__pageTitle_line");
+const showtimesPageTitleLines = document.querySelectorAll(".showtimes__pageTitle_line");
+const showtimesCalendarItems = document.querySelectorAll(".showtimes__calendar_grid-item");
+const divOfShowtimesCalendarItems = document.querySelectorAll(".showtimes__calendar-gridcontainer > div");
 
 const handleDarkMode = () => {
   const setTheme = document.body;
@@ -36,6 +39,24 @@ const handleDarkMode = () => {
 
     pricePageTitleLines.forEach((pricePageTitleLine) => {
       pricePageTitleLine.style.backgroundColor = "white";
+    });
+
+    showtimesPageTitleLines.forEach((showtimesPageTitleLine) => {
+      showtimesPageTitleLine.style.backgroundColor = "white";
+    });
+
+    showtimesCalendarItems.forEach((showtimesCalendarItem) => {
+      showtimesCalendarItem.style.backgroundColor = "var(--darkModeBg)";
+      showtimesCalendarItem.style.color = "white";
+
+      showtimesCalendarItem.onmousemove = function() {
+        showtimesCalendarItem.style.backgroundColor = "white";
+        showtimesCalendarItem.style.color = "var(--darkModeBg)";
+      };
+      showtimesCalendarItem.onmouseleave = function() {
+        showtimesCalendarItem.style.backgroundColor = "var(--darkModeBg)";
+        showtimesCalendarItem.style.color = "white";
+      };
     });
 
     controlBtns.forEach((controlBtn) => {
@@ -89,6 +110,10 @@ const handleDarkMode = () => {
 
     registerFacebookBtn.style.backgroundColor = "white";
     registerFacebookBtn.style.color = "black";
+
+    divOfShowtimesCalendarItems.forEach((divOfShowtimesCalendarItem) => {
+      divOfShowtimesCalendarItem.style.backgroundColor = "transparent";
+    });
   } else {
     theme = "lightMode";
     ball.style.transform = "translate(0px)";
@@ -104,6 +129,24 @@ const handleDarkMode = () => {
 
     pricePageTitleLines.forEach((pricePageTitleLine) => {
       pricePageTitleLine.style.backgroundColor = "var(--darkBrown)";
+    });
+
+    showtimesPageTitleLines.forEach((showtimesPageTitleLine) => {
+      showtimesPageTitleLine.style.backgroundColor = "var(--darkBrown)";
+    });
+
+    showtimesCalendarItems.forEach((showtimesCalendarItem) => {
+      showtimesCalendarItem.style.backgroundColor = "white";
+      showtimesCalendarItem.style.color = "var(--darkBrown)";
+
+      showtimesCalendarItem.onmousemove = function() {
+        showtimesCalendarItem.style.backgroundColor = "var(--darkBrown)";
+        showtimesCalendarItem.style.color = "white"
+      };
+      showtimesCalendarItem.onmouseleave = function() {
+        showtimesCalendarItem.style.backgroundColor = "white";
+        showtimesCalendarItem.style.color = "var(--darkBrown)";
+      };
     });
 
     controlBtns.forEach((controlBtn) => {
@@ -181,6 +224,24 @@ if (getTheme === "darkMode") {
     pricePageTitleLine.style.backgroundColor = "white";
   });
 
+  showtimesPageTitleLines.forEach((showtimesPageTitleLine) => {
+    showtimesPageTitleLine.style.backgroundColor = "white";
+  });
+
+  showtimesCalendarItems.forEach((showtimesCalendarItem) => {
+    showtimesCalendarItem.style.backgroundColor = "var(--darkModeBg)";
+    showtimesCalendarItem.style.color = "white";
+    
+    showtimesCalendarItem.onmousemove = function() {
+      showtimesCalendarItem.style.backgroundColor = "white";
+      showtimesCalendarItem.style.color = "var(--darkModeBg)";
+    };
+    showtimesCalendarItem.onmouseleave = function() {
+      showtimesCalendarItem.style.backgroundColor = "var(--darkModeBg)";
+      showtimesCalendarItem.style.color = "white";
+    };
+  });
+    
   controlBtns.forEach((controlBtn) => {
     controlBtn.style.color = "white";
     controlBtn.addEventListener("mouseover", () => {
@@ -231,4 +292,8 @@ if (getTheme === "darkMode") {
 
   registerFacebookBtn.style.backgroundColor = "white";
   registerFacebookBtn.style.color = "black";
+
+  divOfShowtimesCalendarItems.forEach((divOfShowtimesCalendarItem) => {
+    divOfShowtimesCalendarItem.style.backgroundColor = "transparent";
+  });
 }
