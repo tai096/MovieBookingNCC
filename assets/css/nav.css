@@ -27,6 +27,7 @@ a:hover {
   );
   padding: 15px 45px;
   z-index: 20;
+  transition: top 0.3s;
 }
 
 .nav__menu {
@@ -100,6 +101,7 @@ a:hover {
 .hamburger {
   display: none;
   cursor: pointer;
+  z-index: 10;
 }
 
 .bar {
@@ -110,6 +112,7 @@ a:hover {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   background-color: white;
+  pointer-events: none;
 }
 
 /* .toggle {
