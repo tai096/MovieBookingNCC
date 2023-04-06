@@ -1,5 +1,5 @@
 div.introduction {
-  width: 80%;
+  width: 70%;
   margin: auto;
 }
 
@@ -79,7 +79,12 @@ div.introduction__title img {
 .info_img.different {
   border-radius: 40px 40px 0 40px;
 }
-
+.different .slide{
+  border-radius: 36px 36px 0 36px;
+}
+.slide {
+  border-radius: 36px;
+}
 .slide1 {
   background-image: url(../img/1-1.jpg);
   animation: fade1 18s infinite;
@@ -303,7 +308,7 @@ div.introduction__title img {
     height: auto;
   }
   div.introduction {
-    width: 85%;
+    width: 80%;
   }
   .big_block .block_title {
     font-size: 23px;
@@ -349,7 +354,7 @@ div.introduction__title img {
   }
 }
 
-@media (min-width: 1024px) and (max-width: 1173px) {
+@media (min-width: 1024px) and (max-width: 1174px) {
   div.introduction__line #camera {
     width: 10px;
     height: 10px;
@@ -359,7 +364,7 @@ div.introduction__title img {
     height: auto;
   }
   div.introduction {
-    width: 85%;
+    width: 75%;
   }
   .big_block .block_title {
     font-size: 20px;
@@ -406,9 +411,9 @@ div.introduction__title img {
   }
 }
 
-@media (min-width: 740px) and (max-width: 1023px) {
+@media (min-width: 740px) and (max-width: 1024px) {
   div.introduction__title img {
-    width: 60%;
+    width: 70%;
   }
   .introduction__pageTitle_icon img {
     width: 50px;
@@ -461,7 +466,7 @@ div.introduction__title img {
   }
 }
 
-@media (min-width: 377px) and (max-width: 739px) {
+@media (min-width: 377px) and (max-width: 740px) {
   div.introduction__title img {
     width: 60%;
   }
@@ -492,7 +497,7 @@ div.introduction__title img {
     padding: 0;
     margin-top: 20px;
     margin-left: unset;
-    border: none;
+    border: none !important;
     position: unset;
     font-style: normal;
     width: 90%;
@@ -557,7 +562,7 @@ div.introduction__title img {
     padding: 0;
     margin-top: 10px;
     margin-left: unset;
-    border: none;
+    border: none !important;
     position: unset;
     font-style: normal;
     width: 90%;
@@ -625,7 +630,7 @@ div.introduction__title img {
     padding: 0;
     margin-top: 10px;
     margin-left: unset;
-    border: none;
+    border: none !important;
     position: unset;
     font-style: normal;
     width: 90%;
