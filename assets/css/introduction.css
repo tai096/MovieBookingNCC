@@ -79,7 +79,12 @@ div.introduction__title img {
 .info_img.different {
   border-radius: 40px 40px 0 40px;
 }
-
+.different .slide{
+  border-radius: 36px 36px 0 36px;
+}
+.slide {
+  border-radius: 36px;
+}
 .slide1 {
   background-image: url(../img/1-1.jpg);
   animation: fade1 18s infinite;
@@ -492,7 +497,7 @@ div.introduction__title img {
     padding: 0;
     margin-top: 20px;
     margin-left: unset;
-    border: none;
+    border: none !important;
     position: unset;
     font-style: normal;
     width: 90%;
@@ -557,7 +562,7 @@ div.introduction__title img {
     padding: 0;
     margin-top: 10px;
     margin-left: unset;
-    border: none;
+    border: none !important;
     position: unset;
     font-style: normal;
     width: 90%;
@@ -625,7 +630,7 @@ div.introduction__title img {
     padding: 0;
     margin-top: 10px;
     margin-left: unset;
-    border: none;
+    border: none !important;
     position: unset;
     font-style: normal;
     width: 90%;
