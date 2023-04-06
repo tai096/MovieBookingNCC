@@ -79,7 +79,7 @@
 .showtimes__fimlSection_poster img {
   width: 296px;
   height: 430px;
-  box-shadow: 1px 3px 5px;
+  box-shadow: 1px 3px 5px var(--darkBrown);
   border-radius: 20px;
   margin-left: auto;
   margin-right: auto;
