@@ -24,6 +24,7 @@ const flagIcons = document.querySelectorAll(".flagIcon");
 const publishIcons = document.querySelectorAll(".publishIcon");
 const dangerIcons = document.querySelectorAll(".dangerIcon");
 const showtimesTimeSelectBtns = document.querySelectorAll(".showtimes__filmSection_timeBtn");
+const showtimesFilmTypes = document.querySelectorAll(".showtimes__filmSection_description-filmType");
 
 const handleDarkMode = () => {
   const setTheme = document.body;
@@ -174,6 +175,11 @@ const handleDarkMode = () => {
         showtimesTimeSelectBtn.style.color = "white";
       };
     });
+
+    showtimesFilmTypes.forEach((showtimesFilmType) => {
+      showtimesFilmType.style.backgroundColor = "var(--darkModeRed)";
+    });
+
   } else {
     theme = "lightMode";
     ball.style.transform = "translate(0px)";
@@ -316,6 +322,10 @@ const handleDarkMode = () => {
         showtimesTimeSelectBtn.style.borderColor = "var(--darkBrown)";
         showtimesTimeSelectBtn.style.color = "var(--darkBrown)";
       };
+    });
+
+    showtimesFilmTypes.forEach((showtimesFilmType) => {
+      showtimesFilmType.style.backgroundColor = "var(--darkBrown)";
     });
   }
 
@@ -465,5 +475,9 @@ if (getTheme === "darkMode") {
       showtimesTimeSelectBtn.style.borderColor = "white";
       showtimesTimeSelectBtn.style.color = "white";
     };
+  });
+
+  showtimesFilmTypes.forEach((showtimesFilmType) => {
+    showtimesFilmType.style.backgroundColor = "var(--darkModeRed)";
   });
 }
