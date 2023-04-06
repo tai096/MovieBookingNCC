@@ -142,6 +142,7 @@ const handleDarkMode = () => {
     popUps.forEach((popUp) => {
       popUp.style.backgroundColor = "#88888842";
       popUp.style.backdropFilter = "blur(30px)";
+      popUp.style["-webkit-backdrop-filter"] = "blur(30px)";
     });
 
     loginFormBlocks.forEach((loginFormBlock) => {
@@ -484,6 +485,7 @@ if (getTheme === "darkMode") {
   popUps.forEach((popUp) => {
     popUp.style.backgroundColor = "#88888842";
     popUp.style.backdropFilter = "blur(30px)";
+    popUp.style["-webkit-backdrop-filter"] = "blur(30px)";
   });
 
   loginFormBlocks.forEach((loginFormBlock) => {
