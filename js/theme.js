@@ -123,29 +123,41 @@ const handleDarkMode = () => {
       divOfShowtimesCalendarItem.style.borderColor = "white";
     });
 
-    clockIcons.forEach((clockIcon) => {
-      clockIcon.src = "./assets/svg/clock_icon_white.svg";
-    });
+    if(clockIcons) {
+      clockIcons.forEach((clockIcon) => {
+        clockIcon.src = "./assets/svg/clock_icon_white.svg";
+      });
+    }
 
-    actorIcons.forEach((actorIcon) => {
-      actorIcon.src = "./assets/svg/actor_icon_white.svg";
-    });
+    if(actorIcons) {
+      actorIcons.forEach((actorIcon) => {
+        actorIcon.src = "./assets/svg/actor_icon_white.svg";
+      });
+    }
 
-    directorIcons.forEach((directorIcon) => {
-      directorIcon.src = "./assets/svg/director_icon_white.svg";
-    });
+    if(directorIcons) {
+      directorIcons.forEach((directorIcon) => {
+        directorIcon.src = "./assets/svg/director_icon_white.svg";
+      });
+    }
     
-    flagIcons.forEach((flagIcon) => {
-      flagIcon.src = "./assets/svg/flag_icon_white.svg";
-    });
+    if(flagIcons) {
+      flagIcons.forEach((flagIcon) => {
+        flagIcon.src = "./assets/svg/flag_icon_white.svg";
+      });
+    }
 
-    publishIcons.forEach((publishIcon) => {
-      publishIcon.src = "./assets/svg/publish_icon_white.svg";
-    });
+    if(publishIcons) {
+      publishIcons.forEach((publishIcon) => {
+        publishIcon.src = "./assets/svg/publish_icon_white.svg";
+      });
+    }
 
-    dangerIcons.forEach((dangerIcon) => {
-      dangerIcon.src = "./assets/svg/danger_icon_white.svg";
-    });
+    if(dangerIcons) {
+      dangerIcons.forEach((dangerIcon) => {
+        dangerIcon.src = "./assets/svg/danger_icon_white.svg";
+      });
+    }
 
     showtimesTimeSelectBtns.forEach((showtimesTimeSelectBtn) => {
       showtimesTimeSelectBtn.style.borderColor = "white";
@@ -254,29 +266,41 @@ const handleDarkMode = () => {
       divOfShowtimesCalendarItem.style.borderColor = "var(--darkBrown)";
     });
 
-    clockIcons.forEach((clockIcon) => {
-      clockIcon.src = "./assets/svg/Three o Clock clock.svg";
-    });
+    if(clockIcons) {
+      clockIcons.forEach((clockIcon) => {
+        clockIcon.src = "./assets/svg/Three o Clock clock.svg";
+      });
+    }
 
-    actorIcons.forEach((actorIcon) => {
-      actorIcon.src = "./assets/svg/actors.svg";
-    });
+    if(actorIcons) {
+      actorIcons.forEach((actorIcon) => {
+        actorIcon.src = "./assets/svg/actors.svg";
+      });
+    }
 
-    directorIcons.forEach((directorIcon) => {
-      directorIcon.src = "./assets/svg/film_director.svg";
-    });
+    if(directorIcons) {
+      directorIcons.forEach((directorIcon) => {
+        directorIcon.src = "./assets/svg/film_director.svg";
+      });
+    }
     
-    flagIcons.forEach((flagIcon) => {
-      flagIcon.src = "./assets/svg/Flag.svg";
-    });
+    if(flagIcons) {
+      flagIcons.forEach((flagIcon) => {
+        flagIcon.src = "./assets/svg/Flag.svg";
+      });
+    }
+    
+    if(publishIcons){
+      publishIcons.forEach((publishIcon) => {
+        publishIcon.src = "./assets/svg/camera_publish.svg";
+      });
+    }
 
-    publishIcons.forEach((publishIcon) => {
-      publishIcon.src = "./assets/svg/camera_publish.svg";
-    });
-
-    dangerIcons.forEach((dangerIcon) => {
-      dangerIcon.src = "./assets/svg/danger.svg";
-    });
+    if (dangerIcons) {
+      dangerIcons.forEach((dangerIcon) => {
+        dangerIcon.src = "./assets/svg/danger.svg";
+      });
+    }
 
     showtimesTimeSelectBtns.forEach((showtimesTimeSelectBtn) => {
       showtimesTimeSelectBtn.style.borderColor = "var(--darkBrown)";
@@ -391,29 +415,41 @@ if (getTheme === "darkMode") {
     divOfShowtimesCalendarItem.style.borderColor = "white";
   });
 
-  clockIcons.forEach((clockIcon) => {
-    clockIcon.src = "./assets/svg/clock_icon_white.svg";
-  });
+  if(clockIcons) {
+    clockIcons.forEach((clockIcon) => {
+      clockIcon.src = "./assets/svg/clock_icon_white.svg";
+    });
+  }
 
-  actorIcons.forEach((actorIcon) => {
-    actorIcon.src = "./assets/svg/actor_icon_white.svg";
-  });
+  if(actorIcons) {
+    actorIcons.forEach((actorIcon) => {
+      actorIcon.src = "./assets/svg/actor_icon_white.svg";
+    });
+  }
 
-  directorIcons.forEach((directorIcon) => {
-    directorIcon.src = "./assets/svg/director_icon_white.svg";
-  });
+  if(directorIcons) {
+    directorIcons.forEach((directorIcon) => {
+      directorIcon.src = "./assets/svg/director_icon_white.svg";
+    });
+  }
   
-  flagIcons.forEach((flagIcon) => {
-    flagIcon.src = "./assets/svg/flag_icon_white.svg";
-  });
+  if(flagIcons) {
+    flagIcons.forEach((flagIcon) => {
+      flagIcon.src = "./assets/svg/flag_icon_white.svg";
+    });
+  }
 
-  publishIcons.forEach((publishIcon) => {
-    publishIcon.src = "./assets/svg/publish_icon_white.svg";
-  });
+  if(publishIcons) {
+    publishIcons.forEach((publishIcon) => {
+      publishIcon.src = "./assets/svg/publish_icon_white.svg";
+    });
+  }
 
-  dangerIcons.forEach((dangerIcon) => {
-    dangerIcon.src = "./assets/svg/danger_icon_white.svg";
-  });
+  if(dangerIcons) {
+    dangerIcons.forEach((dangerIcon) => {
+      dangerIcon.src = "./assets/svg/danger_icon_white.svg";
+    });
+  }
 
   showtimesTimeSelectBtns.forEach((showtimesTimeSelectBtn) => {
     showtimesTimeSelectBtn.style.borderColor = "white";
