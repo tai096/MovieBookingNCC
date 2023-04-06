@@ -30,6 +30,27 @@ const profileSpendingImg = document.getElementById("profileSpendingImg");
 const profileSpendingCardImg = document.getElementById(
   "profileSpendingCardImg"
 );
+const showtimesPageTitleLines = document.querySelectorAll(
+  ".showtimes__pageTitle_line"
+);
+const showtimesCalendarItems = document.querySelectorAll(
+  ".showtimes__calendar_grid-item"
+);
+const divOfShowtimesCalendarItems = document.querySelectorAll(
+  ".showtimes__calendar-gridcontainer > div"
+);
+const clockIcons = document.querySelectorAll(".clockIcon");
+const actorIcons = document.querySelectorAll(".actorIcon");
+const directorIcons = document.querySelectorAll(".directorIcon");
+const flagIcons = document.querySelectorAll(".flagIcon");
+const publishIcons = document.querySelectorAll(".publishIcon");
+const dangerIcons = document.querySelectorAll(".dangerIcon");
+const showtimesTimeSelectBtns = document.querySelectorAll(
+  ".showtimes__filmSection_timeBtn"
+);
+const showtimesFilmTypes = document.querySelectorAll(
+  ".showtimes__filmSection_description-filmType"
+);
 
 const handleDarkMode = () => {
   const setTheme = document.body;
@@ -79,6 +100,23 @@ const handleDarkMode = () => {
 
     dashLines.forEach((dashLine) => {
       dashLine.style.borderBottom = "2px dashed white";
+    });
+    showtimesPageTitleLines.forEach((showtimesPageTitleLine) => {
+      showtimesPageTitleLine.style.backgroundColor = "white";
+    });
+
+    showtimesCalendarItems.forEach((showtimesCalendarItem) => {
+      showtimesCalendarItem.style.backgroundColor = "var(--darkModeBg)";
+      showtimesCalendarItem.style.color = "white";
+
+      showtimesCalendarItem.onmousemove = function () {
+        showtimesCalendarItem.style.backgroundColor = "white";
+        showtimesCalendarItem.style.color = "var(--darkModeBg)";
+      };
+      showtimesCalendarItem.onmouseleave = function () {
+        showtimesCalendarItem.style.backgroundColor = "var(--darkModeBg)";
+        showtimesCalendarItem.style.color = "white";
+      };
     });
 
     controlBtns.forEach((controlBtn) => {
@@ -135,6 +173,66 @@ const handleDarkMode = () => {
     registerFacebookBtn.style.color = "black";
 
     toggleMobile.className = "fas fa-sun fa-sun_mobile";
+    divOfShowtimesCalendarItems.forEach((divOfShowtimesCalendarItem) => {
+      divOfShowtimesCalendarItem.style.backgroundColor = "transparent";
+      divOfShowtimesCalendarItem.style.borderColor = "white";
+    });
+
+    if (clockIcons) {
+      clockIcons.forEach((clockIcon) => {
+        clockIcon.src = "./assets/svg/clock_icon_white.svg";
+      });
+    }
+
+    if (actorIcons) {
+      actorIcons.forEach((actorIcon) => {
+        actorIcon.src = "./assets/svg/actor_icon_white.svg";
+      });
+    }
+
+    if (directorIcons) {
+      directorIcons.forEach((directorIcon) => {
+        directorIcon.src = "./assets/svg/director_icon_white.svg";
+      });
+    }
+
+    if (flagIcons) {
+      flagIcons.forEach((flagIcon) => {
+        flagIcon.src = "./assets/svg/flag_icon_white.svg";
+      });
+    }
+
+    if (publishIcons) {
+      publishIcons.forEach((publishIcon) => {
+        publishIcon.src = "./assets/svg/publish_icon_white.svg";
+      });
+    }
+
+    if (dangerIcons) {
+      dangerIcons.forEach((dangerIcon) => {
+        dangerIcon.src = "./assets/svg/danger_icon_white.svg";
+      });
+    }
+
+    showtimesTimeSelectBtns.forEach((showtimesTimeSelectBtn) => {
+      showtimesTimeSelectBtn.style.borderColor = "white";
+      showtimesTimeSelectBtn.style.color = "white";
+      showtimesTimeSelectBtn.style.backgroundColor = "transparent";
+
+      showtimesTimeSelectBtn.onmousemove = function () {
+        showtimesTimeSelectBtn.style.borderColor = "var(--secondaryRed)";
+        showtimesTimeSelectBtn.style.color = "var(--secondaryRed)";
+      };
+
+      showtimesTimeSelectBtn.onmouseleave = function () {
+        showtimesTimeSelectBtn.style.borderColor = "white";
+        showtimesTimeSelectBtn.style.color = "white";
+      };
+    });
+
+    showtimesFilmTypes.forEach((showtimesFilmType) => {
+      showtimesFilmType.style.backgroundColor = "var(--darkModeRed)";
+    });
   } else {
     theme = "lightMode";
     ball.style.transform = "translate(0px)";
@@ -177,6 +275,23 @@ const handleDarkMode = () => {
 
     introductionPageTitleLines.forEach((introductionPageTitleLine) => {
       introductionPageTitleLine.style.backgroundColor = "var(--darkBrown)";
+    });
+    showtimesPageTitleLines.forEach((showtimesPageTitleLine) => {
+      showtimesPageTitleLine.style.backgroundColor = "var(--darkBrown)";
+    });
+
+    showtimesCalendarItems.forEach((showtimesCalendarItem) => {
+      showtimesCalendarItem.style.backgroundColor = "white";
+      showtimesCalendarItem.style.color = "var(--darkBrown)";
+
+      showtimesCalendarItem.onmousemove = function () {
+        showtimesCalendarItem.style.backgroundColor = "var(--darkBrown)";
+        showtimesCalendarItem.style.color = "white";
+      };
+      showtimesCalendarItem.onmouseleave = function () {
+        showtimesCalendarItem.style.backgroundColor = "white";
+        showtimesCalendarItem.style.color = "var(--darkBrown)";
+      };
     });
 
     controlBtns.forEach((controlBtn) => {
@@ -232,6 +347,66 @@ const handleDarkMode = () => {
     registerFacebookBtn.style.color = "white";
 
     toggleMobile.className = "fas fa-moon fa-moon_mobile";
+    divOfShowtimesCalendarItems.forEach((divOfShowtimesCalendarItem) => {
+      divOfShowtimesCalendarItem.style.backgroundColor = "transparent";
+      divOfShowtimesCalendarItem.style.borderColor = "var(--darkBrown)";
+    });
+
+    if (clockIcons) {
+      clockIcons.forEach((clockIcon) => {
+        clockIcon.src = "./assets/svg/Three o Clock clock.svg";
+      });
+    }
+
+    if (actorIcons) {
+      actorIcons.forEach((actorIcon) => {
+        actorIcon.src = "./assets/svg/actors.svg";
+      });
+    }
+
+    if (directorIcons) {
+      directorIcons.forEach((directorIcon) => {
+        directorIcon.src = "./assets/svg/film_director.svg";
+      });
+    }
+
+    if (flagIcons) {
+      flagIcons.forEach((flagIcon) => {
+        flagIcon.src = "./assets/svg/Flag.svg";
+      });
+    }
+
+    if (publishIcons) {
+      publishIcons.forEach((publishIcon) => {
+        publishIcon.src = "./assets/svg/camera_publish.svg";
+      });
+    }
+
+    if (dangerIcons) {
+      dangerIcons.forEach((dangerIcon) => {
+        dangerIcon.src = "./assets/svg/danger.svg";
+      });
+    }
+
+    showtimesTimeSelectBtns.forEach((showtimesTimeSelectBtn) => {
+      showtimesTimeSelectBtn.style.borderColor = "var(--darkBrown)";
+      showtimesTimeSelectBtn.style.color = "var(--darkBrown)";
+      showtimesTimeSelectBtn.style.backgroundColor = "transparent";
+
+      showtimesTimeSelectBtn.onmousemove = function () {
+        showtimesTimeSelectBtn.style.borderColor = "var(--primaryRed)";
+        showtimesTimeSelectBtn.style.color = "var(--primaryRed)";
+      };
+
+      showtimesTimeSelectBtn.onmouseleave = function () {
+        showtimesTimeSelectBtn.style.borderColor = "var(--darkBrown)";
+        showtimesTimeSelectBtn.style.color = "var(--darkBrown)";
+      };
+    });
+
+    showtimesFilmTypes.forEach((showtimesFilmType) => {
+      showtimesFilmType.style.backgroundColor = "var(--darkBrown)";
+    });
   }
 
   localStorage.setItem("webTheme", JSON.stringify(theme));
@@ -268,6 +443,24 @@ if (getTheme === "darkMode") {
     dashLine.style.borderBottom = "2px dashed white";
   });
 
+  showtimesPageTitleLines.forEach((showtimesPageTitleLine) => {
+    showtimesPageTitleLine.style.backgroundColor = "white";
+  });
+
+  showtimesCalendarItems.forEach((showtimesCalendarItem) => {
+    showtimesCalendarItem.style.backgroundColor = "var(--darkModeBg)";
+    showtimesCalendarItem.style.color = "white";
+
+    showtimesCalendarItem.onmousemove = function () {
+      showtimesCalendarItem.style.backgroundColor = "white";
+      showtimesCalendarItem.style.color = "var(--darkModeBg)";
+    };
+    showtimesCalendarItem.onmouseleave = function () {
+      showtimesCalendarItem.style.backgroundColor = "var(--darkModeBg)";
+      showtimesCalendarItem.style.color = "white";
+    };
+  });
+
   controlBtns.forEach((controlBtn) => {
     controlBtn.style.color = "white";
     controlBtn.addEventListener("mouseover", () => {
@@ -277,6 +470,7 @@ if (getTheme === "darkMode") {
       controlBtn.style.color = "white";
     });
   });
+
   showMoreBtns.forEach((showMoreBtn) => {
     showMoreBtn.style.color = "white";
     showMoreBtn.addEventListener("mouseover", () => {
@@ -336,4 +530,65 @@ if (getTheme === "darkMode") {
     profileSpendingImg.src = "./assets/img/spendingGroupDark.png";
     profileSpendingCardImg.src = "./assets/img/cardGroupDark.png";
   }
+
+  divOfShowtimesCalendarItems.forEach((divOfShowtimesCalendarItem) => {
+    divOfShowtimesCalendarItem.style.backgroundColor = "transparent";
+    divOfShowtimesCalendarItem.style.borderColor = "white";
+  });
+
+  if (clockIcons) {
+    clockIcons.forEach((clockIcon) => {
+      clockIcon.src = "./assets/svg/clock_icon_white.svg";
+    });
+  }
+
+  if (actorIcons) {
+    actorIcons.forEach((actorIcon) => {
+      actorIcon.src = "./assets/svg/actor_icon_white.svg";
+    });
+  }
+
+  if (directorIcons) {
+    directorIcons.forEach((directorIcon) => {
+      directorIcon.src = "./assets/svg/director_icon_white.svg";
+    });
+  }
+
+  if (flagIcons) {
+    flagIcons.forEach((flagIcon) => {
+      flagIcon.src = "./assets/svg/flag_icon_white.svg";
+    });
+  }
+
+  if (publishIcons) {
+    publishIcons.forEach((publishIcon) => {
+      publishIcon.src = "./assets/svg/publish_icon_white.svg";
+    });
+  }
+
+  if (dangerIcons) {
+    dangerIcons.forEach((dangerIcon) => {
+      dangerIcon.src = "./assets/svg/danger_icon_white.svg";
+    });
+  }
+
+  showtimesTimeSelectBtns.forEach((showtimesTimeSelectBtn) => {
+    showtimesTimeSelectBtn.style.borderColor = "white";
+    showtimesTimeSelectBtn.style.color = "white";
+    showtimesTimeSelectBtn.style.backgroundColor = "transparent";
+
+    showtimesTimeSelectBtn.onmousemove = function () {
+      showtimesTimeSelectBtn.style.borderColor = "var(--secondaryRed)";
+      showtimesTimeSelectBtn.style.color = "var(--secondaryRed)";
+    };
+
+    showtimesTimeSelectBtn.onmouseleave = function () {
+      showtimesTimeSelectBtn.style.borderColor = "white";
+      showtimesTimeSelectBtn.style.color = "white";
+    };
+  });
+
+  showtimesFilmTypes.forEach((showtimesFilmType) => {
+    showtimesFilmType.style.backgroundColor = "var(--darkModeRed)";
+  });
 }

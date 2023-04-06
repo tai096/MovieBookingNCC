@@ -9,7 +9,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  max-width: 340px;
+  width: 340px;
 }
 
 .showtimes__pageTitle_line {
@@ -79,7 +79,7 @@
 .showtimes__fimlSection_poster img {
   width: 296px;
   height: 430px;
-  box-shadow: 1px 3px 5px;
+  box-shadow: 1px 3px 5px var(--darkBrown);
   border-radius: 20px;
   margin-left: auto;
   margin-right: auto;
@@ -105,6 +105,10 @@
 
 .showtimes__filmSection_description-list li {
   margin-bottom: 12px;
+}
+
+.showtimes__filmSection_description-list span:first-child {
+  margin-right: 4px;
 }
 
 .showtimes_filmSection_description-list span:last-child {
@@ -208,6 +212,10 @@
   .showtimes__filmSection {
     width: 100%;
   }
+  
+  .showtimes__filmSection:last-child {
+    margin-bottom: 56px;
+  }
 
   .showtimes__fimlSection_poster {
     display: flex;
@@ -225,7 +233,7 @@
   }
 
   .showtimes__filmSection_description-filmType {
-    margin-top: 12px;
+    margin-top: 6px;
   }
 
   .showtimes__filmSection_times {
@@ -243,6 +251,11 @@
 }
 
 @media (max-width: 325px) {
+  .showtimes__pageTitle_icon {
+    max-width: 320px;
+    width: 100%;
+  }
+
   .showtimes__calendar-gridcontainer {
     grid-template-columns: repeat(7, 85px);
   }
