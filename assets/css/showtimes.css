@@ -107,6 +107,10 @@
   margin-bottom: 12px;
 }
 
+.showtimes__filmSection_description-list span:first-child {
+  margin-right: 4px;
+}
+
 .showtimes_filmSection_description-list span:last-child {
   display: inline-flex;
   margin-left: 12px;
@@ -208,6 +212,10 @@
   .showtimes__filmSection {
     width: 100%;
   }
+  
+  .showtimes__filmSection:last-child {
+    margin-bottom: 56px;
+  }
 
   .showtimes__fimlSection_poster {
     display: flex;
@@ -225,7 +233,7 @@
   }
 
   .showtimes__filmSection_description-filmType {
-    margin-top: 12px;
+    margin-top: 6px;
   }
 
   .showtimes__filmSection_times {
