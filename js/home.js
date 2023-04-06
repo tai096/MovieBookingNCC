@@ -34,6 +34,7 @@ function renderMovies(type) {
     const movieBtn = document.createElement("button");
     movieBtn.classList.add("home__movies_list-item_btn");
     movieBtn.textContent = "MUA VÉ";
+    movieBtn.addEventListener("click", () => openMovieModal(movie));
     movieItem.appendChild(movieBtn);
 
     sliders.appendChild(movieItem);
@@ -50,6 +51,31 @@ nowPlayingBtn.addEventListener("click", () => {
 comingSoonBtn.addEventListener("click", () => {
   renderMovies("comingSoon");
 });
+
+function openMovieModal(movie) {
+  const movieModal = document.getElementById("movie-modal");
+  const movieTitle = document.getElementById("movie-title");
+  const movieImage = document.getElementById("movie-image");
+  const movieDescription = document.getElementById("movie-description");
+
+  movieTitle.textContent = movie.name;
+  movieImage.src = movie.image;
+  movieDescription.textContent = movie.summary;
+  // buyTicketBtn.setAttribute("data-movie-id", movie.id);
+
+  movieModal.style.display = "flex";
+
+  const closeBtn = document.getElementsByClassName("closeModal")[0];
+  closeBtn.onclick = function () {
+    movieModal.style.display = "none";
+  };
+
+  window.onclick = function (event) {
+    if (event.target == movieModal) {
+      movieModal.style.display = "none";
+    }
+  };
+}
 
 const carouselContainer = document.querySelector(".home__movies_carousel");
 

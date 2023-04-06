@@ -1,5 +1,6 @@
 const ball = document.getElementById("ball");
 const footer = document.getElementById("footer");
+const modalHome = document.getElementById("modalHome");
 const controlBtns = document.querySelectorAll(".home__control_btn");
 const showMoreBtns = document.querySelectorAll(".home__showMore");
 const homeNewsLines = document.querySelectorAll(".home__news_header-line");
@@ -62,6 +63,8 @@ const handleDarkMode = () => {
     theme = "darkMode";
     ball.style.transform = "translate(39px)";
     footer.style.background = "#0000002e";
+
+    modalHome.style.background = "var(--darkModeBg)";
 
     if (profileInformationHeader) {
       profileInformationHeader.style.borderBottomColor = "white";
@@ -238,6 +241,8 @@ const handleDarkMode = () => {
     theme = "lightMode";
     ball.style.transform = "translate(0px)";
     footer.style.background = "var(--darkBrown)";
+
+    modalHome.style.background = "white";
 
     if (titleImg) {
       titleImg.src = "./assets/img/myheader.png";
@@ -419,6 +424,8 @@ if (getTheme === "darkMode") {
   document.body.classList = "darkmode";
   ball.style.transform = "translate(39px)";
   footer.style.background = "#0000002e";
+
+  modalHome.style.background = "var(--darkModeBg)";
 
   homeNewsLines.forEach((homeNewsLine) => {
     homeNewsLine.style.background = "white";

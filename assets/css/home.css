@@ -245,6 +245,77 @@
   align-items: center;
   margin-bottom: 5px;
 }
+
+/* MODAL */
+
+.modal {
+  display: none; /* Hidden by default */
+  align-items: center;
+  position: fixed; /* Stay in place */
+  z-index: 20; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.7); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  max-width: 950px;
+  background-color: #ffffff;
+  margin: auto;
+  padding: 25px 30px;
+  border-radius: 10px;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.modal-content_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.modal-content .movie__image {
+  width: 300px;
+  height: 460px;
+  object-fit: cover;
+  border-radius: 20px;
+  margin-right: 20px;
+  box-shadow: 0px 3px 5px 2px rgba(0, 0, 0, 0.3);
+}
+
+.modal-content h1 {
+  font-size: 30px;
+  max-width: 550px;
+  margin-bottom: 15px;
+}
+
+/* The Close Button */
+.closeModal {
+  height: 20px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.closeModal:hover,
+.closeModal:focus {
+  color: var(--primaryRed);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.QRcode {
+  width: 150px;
+  border-radius: 20px;
+  margin: 10px 0;
+}
+
 @media (max-width: 1024px) {
   .home__movies_carousel {
     width: 95%;
@@ -330,9 +401,42 @@
     width: 40px;
     margin: 0 15px;
   }
+
+  .modal-content {
+    width: 80%;
+    padding: 10px 25px;
+  }
+
+  .modal-content_box {
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  .modal-content h1 {
+    font-size: 25px;
+    text-align: center;
+    /* max-width: 550px; */
+    margin: 20px 0;
+  }
+
+  .modal-content .movie__image {
+    margin-right: 0;
+  }
 }
 
 @media (max-width: 450px) {
+  .modal-content .movie__image {
+    width: 250px;
+    height: 380px;
+    object-fit: cover;
+  }
+
+  .modal-content h1 {
+    font-size: 18px;
+    /* max-width: 550px; */
+    margin: 20px 0;
+  }
+
   .home__news_contents-item img {
     width: 280px;
     height: 170px;

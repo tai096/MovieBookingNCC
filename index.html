@@ -603,6 +603,46 @@
 
       <!-- homePage -->
       <div class="home">
+        <div id="movie-modal" class="modal">
+          <!-- Modal content -->
+          <div id="modalHome" class="modal-content">
+            <span class="closeModal">&times;</span>
+            <div class="modal-content_box">
+              <img class="movie__image" id="movie-image" />
+              <div style="width: 20px"></div>
+              <div style="max-width: 600px">
+                <h1 id="movie-title"></h1>
+                <b style="font-weight: 600">Nội dung: </b>
+                <span id="movie-description"></span>
+                <br />
+                <br />
+                <b style="font-weight: 600">Loại vé: </b>
+                <span>VIP</span>
+                <br />
+                <br />
+                <b style="font-weight: 600">Giá vé: </b>
+                <span>80.000 vnđ</span>
+                <div
+                  style="
+                    font-size: 18px;
+                    margin-top: 20px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                  "
+                >
+                  <h2 style="font-weight: 600">
+                    Hãy quét mã QR bên dưới để thanh toán
+                  </h2>
+                  <img class="QRcode" src="./assets/img/QRcode.jpg" alt="QR" />
+                  <h2 style="font-weight: 600">Trịnh Đăng Tài</h2>
+                  <p>0387723075</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div id="slider">
           <ul id="slideWrap">
             <li><img src="./assets/img/Slider.jpg" alt="" /></li>
