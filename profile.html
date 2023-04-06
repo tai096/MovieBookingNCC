@@ -64,12 +64,13 @@
 
     <div class="app">
       <!-- navBar -->
-      <nav style="position: sticky" class="nav">
+      <nav id="navbar" style="position: sticky" class="nav">
         <i
           onclick="handleDarkMode()"
           id="toggleMobile"
           class="fas fa-moon fa-moon_mobile"
         ></i>
+
         <img
           onclick="window.location.href='index.html'"
           src="./assets/img/logo.png"
@@ -106,9 +107,10 @@
             </div>
           </div>
         </div>
-        <div class="nav__mobie">
+        <div id="navMobie" class="nav__mobie">
           <div
             style="display: flex; flex-direction: column; align-items: center"
+            onclick="window.location.replace('./profile.html')"
           >
             <img
               id="navMobieAvatar"
@@ -137,7 +139,7 @@
           <a href="./price.html">GIÁ VÉ</a>
           <button id="navMobieAuth">ĐĂNG NHẬP</button>
         </div>
-        <div class="hamburger">
+        <div id="hamburger" class="hamburger">
           <span class="bar"></span>
           <span class="bar"></span>
           <span class="bar"></span>
