@@ -251,6 +251,11 @@
 }
 
 @media (max-width: 325px) {
+  .showtimes__pageTitle_icon {
+    max-width: 320px;
+    width: 100%;
+  }
+
   .showtimes__calendar-gridcontainer {
     grid-template-columns: repeat(7, 85px);
   }
