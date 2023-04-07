@@ -5,6 +5,7 @@ const controlBtns = document.querySelectorAll(".home__control_btn");
 const showMoreBtns = document.querySelectorAll(".home__showMore");
 const homeNewsLines = document.querySelectorAll(".home__news_header-line");
 const popUps = document.querySelectorAll(".popup-content");
+const popupTitleFronts = document.querySelectorAll(".popup-title.front");
 const registerFormBlocks = document.querySelectorAll(".register__form_block");
 const loginFormBlocks = document.querySelectorAll(".loginForm__form_block");
 const formLines = document.querySelectorAll(".form__line");
@@ -149,6 +150,10 @@ const handleDarkMode = () => {
       popUp.style.backdropFilter = "blur(30px)";
       popUp.style["-webkit-backdrop-filter"] = "blur(30px)";
     });
+
+    popupTitleFronts.forEach((popupTitleFront) => {
+      popupTitleFront.style.color = "white";
+    })
 
     loginFormBlocks.forEach((loginFormBlock) => {
       loginFormBlock.style.borderColor = "white";
@@ -328,6 +333,10 @@ const handleDarkMode = () => {
       popUp.style.backgroundColor = "rgba(255, 255, 255, 0.8)";
     });
 
+    popupTitleFronts.forEach((popupTitleFront) => {
+      popupTitleFront.style.color = "#251f1a";
+    })
+
     loginFormBlocks.forEach((loginFormBlock) => {
       loginFormBlock.style.borderColor = "#a3a3a3";
     });
@@ -500,6 +509,10 @@ if (getTheme === "darkMode") {
     popUp.style.backdropFilter = "blur(30px)";
     popUp.style["-webkit-backdrop-filter"] = "blur(30px)";
   });
+
+  popupTitleFronts.forEach((popupTitleFront) => {
+    popupTitleFront.style.color = "white";
+  })
 
   loginFormBlocks.forEach((loginFormBlock) => {
     loginFormBlock.style.borderColor = "white";
