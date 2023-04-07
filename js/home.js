@@ -33,6 +33,7 @@ function renderMovies(type) {
     const movieName = document.createElement("p");
     movieName.classList.add("home__movies_list-item_name");
     movieName.textContent = movie.name;
+    movieName.title = movie.name;
     movieItem.appendChild(movieName);
 
     const movieBtn = document.createElement("button");
