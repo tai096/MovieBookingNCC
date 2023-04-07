@@ -261,6 +261,10 @@
   background-color: rgba(0, 0, 0, 0.7); /* Black w/ opacity */
 }
 
+.modal::-webkit-scrollbar {
+  width: 0;
+}
+
 /* Modal Content */
 .modal-content {
   max-width: 950px;
@@ -313,7 +317,7 @@
 .QRcode {
   width: 150px;
   border-radius: 20px;
-  margin: 10px 0;
+  margin: 15px 0;
 }
 
 @media (max-width: 1024px) {

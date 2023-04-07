@@ -64,7 +64,9 @@ const handleDarkMode = () => {
     ball.style.transform = "translate(39px)";
     footer.style.background = "#0000002e";
 
-    modalHome.style.background = "var(--darkModeBg)";
+    if (modalHome) {
+      modalHome.style.background = "var(--darkModeBg)";
+    }
 
     if (profileInformationHeader) {
       profileInformationHeader.style.borderBottomColor = "white";
@@ -242,7 +244,9 @@ const handleDarkMode = () => {
     ball.style.transform = "translate(0px)";
     footer.style.background = "var(--darkBrown)";
 
-    modalHome.style.background = "white";
+    if (modalHome) {
+      modalHome.style.background = "white";
+    }
 
     if (titleImg) {
       titleImg.src = "./assets/img/myheader.png";
@@ -425,7 +429,9 @@ if (getTheme === "darkMode") {
   ball.style.transform = "translate(39px)";
   footer.style.background = "#0000002e";
 
-  modalHome.style.background = "var(--darkModeBg)";
+  if (modalHome) {
+    modalHome.style.background = "var(--darkModeBg)";
+  }
 
   homeNewsLines.forEach((homeNewsLine) => {
     homeNewsLine.style.background = "white";

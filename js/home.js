@@ -1,8 +1,12 @@
 import { movies } from "../services/fakeData.js";
+import { showToast } from "./toast.js";
 
 const sliders = document.querySelector(".home__movies_carousel-list");
 const nowPlayingBtn = document.querySelector(".home__control_btn:first-child");
 const comingSoonBtn = document.querySelector(".home__control_btn:last-child");
+const toast = document.getElementById("toast");
+
+const accessToken = localStorage.getItem("accessToken");
 
 let isDown = false;
 let startX;
@@ -34,7 +38,19 @@ function renderMovies(type) {
     const movieBtn = document.createElement("button");
     movieBtn.classList.add("home__movies_list-item_btn");
     movieBtn.textContent = "MUA VÉ";
-    movieBtn.addEventListener("click", () => openMovieModal(movie));
+    movieBtn.addEventListener("click", () => {
+      if (accessToken && movie.type === "nowPlaying") {
+        openMovieModal(movie);
+      } else if (movie.type === "comingSoon") {
+        toast.innerText = "Phim chưa khởi chiếu!";
+        toast.style.backgroundColor = "red";
+        showToast();
+      } else {
+        toast.innerText = "Vui lòng đăng nhập để mua vé!";
+        toast.style.backgroundColor = "red";
+        showToast();
+      }
+    });
     movieItem.appendChild(movieBtn);
 
     sliders.appendChild(movieItem);
