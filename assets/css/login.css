@@ -31,9 +31,19 @@
   box-shadow: 0px 4px 10px 3px rgba(0, 0, 0, 0.25);
 }
 
-.popup-content h1 {
+.popup-title {
   font-size: 36px;
-  /* color: #251f1a; */
+}
+
+.popup-title.back {
+  color: var(--secondaryRed);
+  
+}
+
+.popup-title.front {
+  color: #251f1a;
+  position: absolute; 
+  translate: -2px;
 }
 
 .popup-content p {
@@ -258,8 +268,12 @@
 }
 
 @media (max-width: 600px) {
-  .popup-content h1 {
+  .popup-title {
     font-size: 30px;
+  }
+
+  .popup-title.front {
+    translate: -1px;
   }
 
   .popup-content p {
@@ -294,7 +308,7 @@
     width: 85%;
     padding: 15px;
   }
-  .popup-content h1 {
+  .popup-title {
     font-size: 20px;
   }
 
